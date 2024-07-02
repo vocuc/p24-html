@@ -1,10 +1,14 @@
-:root{
-  --foreground-primary:#1570EF;
+:root {
+  --foreground-primary: #1570EF;
   --bs-primary: #1570EF;
 }
 
 body {
   font-family: "Inter", sans-serif;
+}
+
+.fw-medium {
+  font-weight: 500;
 }
 
 .form-label {
@@ -45,22 +49,22 @@ body {
 .btn-primary {
   --bs-btn-bg: var(--bs-primary);
   --bs-btn-color: #fff;
-    --bs-btn-bg: var(--bs-primary);
-    --bs-btn-border-color: var(--bs-primary);
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #0b5ed7;
-    --bs-btn-hover-border-color: #0a58ca;
-    --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #0a58ca;
-    --bs-btn-active-border-color: #0a53be;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: var(--bs-primary);
-    --bs-btn-disabled-border-color: var(--bs-primary);
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0b5ed7;
+  --bs-btn-hover-border-color: #0a58ca;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #0a58ca;
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--bs-primary);
+  --bs-btn-disabled-border-color: var(--bs-primary);
 }
 
-.btn-outline-primary{
+.btn-outline-primary {
   --bs-btn-color: #3861FB;
   --bs-btn-border-color: #B6D1FB;
   --bs-btn-hover-color: #fff;
@@ -80,4 +84,58 @@ body {
 .btn-light {
   --bs-btn-bg: #F7F9FD;
   --bs-btn-hover-bg: #e5eaf3;
+}
+
+.accordion {
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-border-color: transparent;
+  --bs-accordion-btn-color: #1C1F25;
+  --bs-accordion-active-color: #1C1F25;
+  --bs-accordion-body-padding-x: 0px;
+  --bs-accordion-body-padding-y: 0px;
+  --bs-accordion-border-radius: 0px;
+  --bs-accordion-btn-padding-x:16px;
+  --bs-accordion-btn-icon-width:16px;
+
+  .accordion-item {
+    .accordion-button {
+      font-size: 20px;
+      font-weight: 700;
+      border-bottom: 1.003px solid var(--Neutral-N200, #ECEEF4);
+
+      &::before {
+        margin-right: 16px;
+        margin-left: -16px ;
+        content:"";
+        width: 4px;
+        height: 16px;
+        border-radius: 2px;
+        background-color: #387FF5;
+      }
+      &::after {
+
+      }
+
+      &:focus {
+        box-shadow: unset;
+      }
+
+      &:not(.collapsed) {
+        border: unset;
+      }
+    }
+
+    .accordion-collapse {
+      &:is(.show) {
+        border-bottom: 1.003px solid var(--Neutral-N400, #B6BCCD);
+      }
+    }
+  }
+
+  .accordion-body {
+    font-size: 16px;
+    color: var(--Neutral-N800, #4B5162);
+    padding: var(--inset-none, 0px) var(--inline-xl, 20px) var(--stack-xl, 20px) var(--inset-none, 0px);
+
+  }
 }
