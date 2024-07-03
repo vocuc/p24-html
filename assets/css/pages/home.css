@@ -539,8 +539,61 @@
 
 #section-5 {
   background-image: url('../../image/Startminging.png');
+  background-size: cover;
+  background-position: center;
   padding: 60px 0;
-  h5{
-    
+  >div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    h5{
+      text-align: center;
+      font-weight:700;
+      font-size: 42px;
+      line-height: 52px;
+      color: #FFFFFF;
+      letter-spacing: -0.924px;
+      
+    }
+    p{
+      width: 700px;
+      text-align: center;
+      color: var(--Content-ContentInversePrimary, #FFF);
+      letter-spacing: -0.176px;
+      span{
+        font-weight: 700;
+        
+      }
+      
+    }
+    button{
+      background: linear-gradient(93deg, rgba(255, 255, 255, 0.13) 6.01%, rgba(255, 255, 255, 0.25) 90.83%);
+      border-radius: var(--lg, 12px);
+      padding: var(--stack-lg, 16px) var(--stack-3xl, 32px);
+      color: var(--DarkOverlayElement-100, #FFF);
+      font-weight: 700;
+      border: unset;
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  #section-5 {
+    background-image: url('../../image/Startminging.png');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    >div{
+      h5{
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -0.792px;
+      }
+      p{
+        width: 100%;
+      }
+    }
   }
 }
