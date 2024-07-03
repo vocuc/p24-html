@@ -58,6 +58,10 @@ body {
             .dropdown-item{
               padding: var(--inset-sm, 8px) 12px;
               border-radius: var(--md, 8px);
+              font-weight: 500;
+              img{
+                margin-right: 8px;
+              }
               
               &.active{
                 background: var(--Primary-50, #E8F1FC);
