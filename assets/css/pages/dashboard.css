@@ -4,6 +4,15 @@ main {
   .page-title {
     font-size: 36px;
     font-weight: 700;
+  }
+  
+  @media (max-width: 991px) {
+    padding-top: 24px;
+  
+    .page-title {
+      font-size: 28px;
+      font-weight: 600;
+    }
 
   }
 
@@ -38,6 +47,27 @@ main {
 
     }
   }
+  @media (max-width: 991px) {
+    #section-1 {
+      margin-top: 24px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 52px;
+      justify-content: center;
+      align-items: center;
+  
+      background: #FFF;
+      border-radius: var(--lg, 12px);
+  
+      .chart {
+        display: flex;
+        flex-direction: column;
+        gap: 52px;
+  
+      }
+    }
+  }
 
   #section-2 {
     margin: 40px 0;
@@ -66,45 +96,53 @@ main {
       padding: 24px;
       border-radius: var(--lg, 12px);
       box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
+      .table-wrapper {
+        overflow-x: auto;
 
-      .table {
-        --bs-table-striped-bg: rgba(244, 244, 244, 0.50);
+        .table {
+          --bs-table-striped-bg: rgba(244, 244, 244, 0.50);
 
-        th {
-          color: var(--Neutral-04, #6F767E);
-          font-size: 12px;
-          font-weight: 500;
-          padding: 16px 24px;
-        }
+          th {
+            color: var(--Neutral-04, #6F767E);
+            font-size: 12px;
+            font-weight: 500;
+            padding: 16px 24px;
+          }
 
-        td {
-          padding: 8px 24px;
-
-          .badge {
-            font-weight: 600;
+          td {
+            padding: 8px 24px;
             font-size: 14px;
-            line-height: 24px;
-            border-radius: 6px;
-            padding: 2px var(--inset-sm, 8px);
-            &.text-bg-success {
-              background-color: var(--Secondary-04, #B5E4CA) !important;
-              color: var(--Neutral-07, #1A1D1F) !important;
-            }
-            &.text-bg-primary { 
-              background-color: var(--Secondary-03, #B1E5FC) !important;
-              color: var(--Neutral-07, #1A1D1F) !important;
-            }
-            &.text-bg-primary-1 { 
-              background-color: var(--Secondary-02 , #B1E5FC) !important;
-              color: var(--Neutral-07, #1A1D1F) !important;
-            }
+            font-weight: 600;
 
+            .badge {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 24px;
+              border-radius: 6px;
+              padding: 2px var(--inset-sm, 8px);
+
+              &.text-bg-success {
+                background-color: var(--Secondary-04, #B5E4CA) !important;
+                color: var(--Neutral-07, #1A1D1F) !important;
+              }
+
+              &.text-bg-primary {
+                background-color: var(--Secondary-03, #B1E5FC) !important;
+                color: var(--Neutral-07, #1A1D1F) !important;
+              }
+
+              &.text-bg-primary-1 {
+                background-color: var(--Secondary-02, #CABDFF) !important;
+                color: var(--Neutral-07, #1A1D1F) !important;
+              }
+
+            }
           }
         }
-      }
 
-      .table>:not(caption)>*>* {
-        border: unset;
+        .table>:not(caption)>*>* {
+          border: unset;
+        }
       }
     }
   }

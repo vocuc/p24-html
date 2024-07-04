@@ -84,9 +84,19 @@
                 <a class="nav-link" href="#">Company</a>
               </li>
             </ul>
-            <div class="d-flex gap-2 action align-items-center">
-              <button class="btn btn-outline-primary">Download</button>
-              <button class="btn btn-primary">Get Started</button>
+            <div class="d-flex gap-3 action align-items-center">
+              <div class="money">
+                <img src="../assets/image/navbar-button-text.png" alt="">
+                <div class="value">
+                  <div>3.00 USDT</div>
+                  <div>Bonus: 0.00 USDT</div>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.2051 4.59204C12.6117 4.18538 13.2848 4.18538 13.6915 4.59204C13.9018 4.80238 14 5.06882 14 5.33525C14 5.60168 13.9018 5.86812 13.6915 6.07846L8.74145 11.0285C8.33479 11.4352 7.6617 11.4352 7.25504 11.0285L2.305 6.07846C1.89833 5.6718 1.89833 4.9987 2.305 4.59204C2.71166 4.18538 3.38475 4.18538 3.79141 4.59204L7.99825 8.79888L12.2051 4.59204Z" fill="#8C8C8C"/>
+                  </svg>
+                  
+              </div>
+              <button class="btn btn-outline-primary">Recharge</button>
               <div class="dropdown">
                 <div class="dropdown-toggle d-flex align-items-center gap-1" type="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
@@ -201,30 +211,45 @@
           </a>
         </div>
         <div class="recent-table">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Month</th>
-                <th scope="col">Status</th>
-                <th scope="col">Method</th>
-                <th scope="col">Earnings</th>
-                <th scope="col">Amount withdrawn</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Oct 2021</td>
-                <td>
-                  <span class="badge text-bg-success">Paid</span>
-                </td>
-                <td>
-                  <span class="badge text-bg-primary">Paypal</span>
-                  <span class="badge text-bg-primary-1">SWIFT</span>
-                </td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-            </tbody>
-          </table>
+          <div class="table-wrapper">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col" style="min-width: 150px;">Month</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Method</th>
+                  <th scope="col">Earnings</th>
+                  <th scope="col" style="min-width: 200px;">Amount withdrawn</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Oct 2021</td>
+                  <td>
+                    <span class="badge text-bg-success">Paid</span>
+                  </td>
+                  <td>
+                    <!-- <span class="badge text-bg-primary">Paypal</span> -->
+                    <span class="badge text-bg-primary-1">SWIFT</span>
+                  </td>
+                  <td>$128,899.00</td>
+                  <td>$128,899.00</td>
+                  </tr>
+                <tr>
+                  <td>Oct 2021</td>
+                  <td>
+                    <span class="badge text-bg-success">Paid</span>
+                  </td>
+                  <td>
+                    <span class="badge text-bg-primary">Paypal</span>
+                    <!-- <span class="badge text-bg-primary-1">SWIFT</span> -->
+                  </td>
+                  <td>$128,899.00</td>
+                  <td>$128,899.00</td>
+                  </tr>
+              </tbody>
+            </table>
+           </div>
         </div>
       </section>
     </div>

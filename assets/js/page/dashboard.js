@@ -30,19 +30,12 @@ var options = {
   chart: {
     type: "donut",
   },
-  responsive: [
-    {
-      breakpoint: 480,
-      options: {
-        chart: {
-          width: 200,
-        },
-        legend: {
-          position: "bottom",
-        },
-      },
-    },
-  ],
+  plotOptions: {
+    pie: {
+      size: 200
+    }
+  }
+
 };
 
 var chart_1 = new ApexCharts(document.querySelector("#chart-1"), options);
