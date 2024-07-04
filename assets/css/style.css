@@ -83,7 +83,8 @@ body {
 
 .btn-light {
   --bs-btn-bg: #F7F9FD;
-  --bs-btn-hover-bg: #e5eaf3;
+  --bs-btn-hover-bg: #E8F1FC;
+  --bs-btn-hover-border-color: #E8F1FC;
 }
 
 .accordion {
