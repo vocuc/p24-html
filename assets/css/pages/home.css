@@ -105,6 +105,7 @@
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
     display: flex;
     flex-direction: column;
+    
 
     .mining-speed {
       display: flex;
@@ -125,37 +126,40 @@
       }
     }
 
-    .mining-process {
+    #range {
       margin-top: 42px;
-
-      position: relative;
-      height: 50px;
-
-
-      .track,
-      .running {
-        position: absolute;
-        height: 12px;
-        border-radius: 6px;
-        top: 18px;
-      }
-
-      .track {
-        width: 100%;
-        background: #F2F2F2;
-      }
-
-      .running {
-        width: 50%;
-        background: linear-gradient(90deg, #7190FF 0%, #7190FF 100%);
-      }
-
-      .thumb {
-        position: absolute;
-        z-index: 3;
-        left: calc(50% - 25px);
-      }
+      -webkit-appearance: none;
+      appearance: none; 
+      width: 100%;
+      cursor: pointer;
+      outline: none;
+      border-radius: 6px;
+      height: 12px;
+      background: #F2F2F2;
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none; 
+          height: 40px;
+          width: 40px;
+          background: transparent;
+          background-image: url("../../image/light.png");
+          background-size: cover;
+          border-radius: 50%;
+        }
+        
+        /* Thumb: Firefox */
+        &::-moz-range-thumb {
+          height: 40px;
+          width: 40px;
+          background: transparent;
+          background-image: url("../../image/light.png");
+          background-size: cover;
+          border: none;
+          border-radius: 50%;
+        }
     }
+    
+    
 
     .coefficient {
       margin: 10px 0 49px 0;

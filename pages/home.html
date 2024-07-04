@@ -94,12 +94,12 @@
                 </div>
                 <ul class="dropdown-menu">
                   <li><button class="dropdown-item" type="button">
-                    <img src="../assets/image/navbar-united-kingdom-1.png" width="24" height="24" alt="EN">
-                    English
-                  </button></li>
+                      <img src="../assets/image/navbar-united-kingdom-1.png" width="24" height="24" alt="EN">
+                      English
+                    </button></li>
                   <li><button class="dropdown-item active" type="button">
-                    <img src="../assets/image/navbar-vietnam-1.png" width="24" height="24" alt="EN">
-                    Viet Nam</button></li>
+                      <img src="../assets/image/navbar-vietnam-1.png" width="24" height="24" alt="EN">
+                      Viet Nam</button></li>
                 </ul>
               </div>
             </div>
@@ -133,10 +133,8 @@
       <div class="container">
         <div class="mining-metrics">
           <div class="mining-speed">Mining speed: <span class="multiply">×</span> <span>0.5</span></div>
-          <div class="mining-process">
-            <div class="track"></div>
-            <div class="running"></div>
-            <img class="thumb" src="../assets/image/light.png" alt="light">
+          <div class="range">
+            <input type="range" min="0" max="100" value="30" id="range" />
           </div>
           <div class="coefficient">
             <div class="coefficient-item">
@@ -575,5 +573,24 @@
 </body>
 <script src="../assets/js/jquery/jquery-3.7.1.min.js"></script>
 <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script>
+  const sliderEl = document.querySelector("#range")
+
+  sliderEl.addEventListener("input", (event) => {
+    return setActiveRange(event.target.value)
+  })
+
+  function setActiveRange(value) {
+    const tempSliderValue = Number(value);
+
+    const progress = (tempSliderValue / sliderEl.max) * 100;
+
+    sliderEl.style.background = `linear-gradient(to right, #7190FF ${progress}%, #F2F2F2 ${progress}%)`;
+  }
+
+  $(document).ready(function () {
+    setActiveRange($("#range").val());
+  });
+</script>
 
 </html>
