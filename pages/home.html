@@ -580,7 +580,7 @@
     return setActiveRange(event.target.value)
   })
 
-  function setActiveRange(value) {
+  const setActiveRange = (value) => {
     const tempSliderValue = Number(value);
 
     const progress = (tempSliderValue / sliderEl.max) * 100;
