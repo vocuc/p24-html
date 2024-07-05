@@ -140,3 +140,49 @@ body {
 
   }
 }
+
+/* Table */
+.table {
+  --bs-table-striped-bg: rgba(244, 244, 244, 0.50);
+  :not(caption)>*>* {
+    border: unset;
+  }
+
+  th {
+    color: var(--Neutral-04, #6F767E);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 16px 24px;
+  }
+
+  td {
+    padding: 8px 24px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+/* Badge */
+.badge {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 6px;
+  padding: 2px var(--inset-sm, 8px);
+
+  &.text-bg-success {
+    background-color: var(--Secondary-04, #B5E4CA) !important;
+    color: var(--Neutral-07, #1A1D1F) !important;
+  }
+
+  &.text-bg-primary {
+    background-color: var(--Secondary-03, #B1E5FC) !important;
+    color: var(--Neutral-07, #1A1D1F) !important;
+  }
+
+  &.text-bg-primary-1 {
+    background-color: var(--Secondary-02, #CABDFF) !important;
+    color: var(--Neutral-07, #1A1D1F) !important;
+  }
+
+}
