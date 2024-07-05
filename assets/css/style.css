@@ -95,8 +95,8 @@ body {
   --bs-accordion-body-padding-x: 0px;
   --bs-accordion-body-padding-y: 0px;
   --bs-accordion-border-radius: 0px;
-  --bs-accordion-btn-padding-x:16px;
-  --bs-accordion-btn-icon-width:16px;
+  --bs-accordion-btn-padding-x: 16px;
+  --bs-accordion-btn-icon-width: 16px;
 
   .accordion-item {
     .accordion-button {
@@ -106,16 +106,15 @@ body {
 
       &::before {
         margin-right: 16px;
-        margin-left: -16px ;
-        content:"";
+        margin-left: -16px;
+        content: "";
         width: 4px;
         height: 16px;
         border-radius: 2px;
         background-color: #387FF5;
       }
-      &::after {
 
-      }
+      &::after {}
 
       &:focus {
         box-shadow: unset;
@@ -144,6 +143,7 @@ body {
 /* Table */
 .table {
   --bs-table-striped-bg: rgba(244, 244, 244, 0.50);
+
   :not(caption)>*>* {
     border: unset;
   }
@@ -183,6 +183,57 @@ body {
   &.text-bg-primary-1 {
     background-color: var(--Secondary-02, #CABDFF) !important;
     color: var(--Neutral-07, #1A1D1F) !important;
+  }
+
+}
+
+/* Paginate */
+
+.pagination {
+  --bs-pagination-disabled-color:#C4CDD5;
+  --bs-pagination-disabled-bg:#ECEDEE;
+  --bs-pagination-disabled-border-color:#ECEDEE;
+  --bs-pagination-active-color:#1B6DDF;
+  --bs-pagination-active-bg:#FFFFFF;
+  --bs-pagination-active-border-color:#1B6DDF;
+  --bs-pagination-border-color:#DFE3E8;
+  --bs-pagination-border-radius:4px;
+  gap: var(--inset-sm, 8px);
+
+  .page-item {
+    border-radius: var(--bs-pagination-border-radius);
+    
+    .page-link {
+      padding: unset;
+      height: 32px;
+      width: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      --bs-pagination-font-size: 14px;
+      --bs-pagination-color: #212B36;
+      border-radius: var(--bs-pagination-border-radius);
+      font-weight: 700;
+    }
+  }
+}
+
+/* InputGroup */
+.input-group{
+  .input-group-text{
+    border-color: #E7E6EC;
+    background-color: #FFF;
+    color: #A7AEB4;
+    border-radius:8px;
+    font-size: 14px;
+    
+    }
+    .form-control,
+    .form-select{
+    border-color: #E7E6EC;
+    padding-left: 0;
+    border-left: unset;
   }
 
 }
