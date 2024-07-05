@@ -1,0 +1,142 @@
+section {
+  margin-top: 48px;
+
+  .section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+}
+
+#section-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    p {
+      border-radius: 20px;
+      width: fit-content;
+      padding: 4px 12px;
+      background: #F3F3F3;
+      border: 1px solid #F4F4F4;
+
+    }
+  }
+
+  button {
+    border: 14px solid #FFF;
+    background: radial-gradient(57.98% 56.91% at 50% 50%, #5382F9 0%, #1855F1 100%);
+    box-shadow: 0px 8px 24px 0px rgba(255, 255, 255, 0.25) inset;
+    padding: 20px 24px;
+    border-radius: 133px;
+
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFF;
+    
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+  }
+
+  .earned {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h5 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    p {
+      color: #A3A3A3;
+      font-size: 14px;
+      font-weight: 500;
+
+    }
+  }
+}
+
+#section-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+
+
+  .refer-friend {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: var(--inset-xl, 20px);
+    border-radius: var(--lg, 12px);
+    background: linear-gradient(90deg, #EDEFFE 0%, #EDEFFE 47.45%, #FFEEE4 123.26%);
+
+    img {
+      width: 52px;
+    }
+
+    .title {
+      font-weight: 600;
+    }
+
+    .content {
+      font-size: 14px;
+      color: #656565;
+
+    }
+
+  }
+}
+
+
+#section-4 {
+  padding: 128px 0 112px 0;
+  background-image: url(../../image/background.png);
+  background-size: 304px;
+  background-position: bottom 72px left -63px;
+  background-repeat: no-repeat;
+
+}
+
+@media (max-width: 991px) {
+  #section-4 {
+    padding: 60px 0;
+    background-color: #FFF;
+    background-image: unset;
+
+    .left {
+      width: 100%;
+
+      h3 {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -0.792px;
+        margin-bottom: 16px;
+
+        span {
+          color: #387FF5;
+        }
+      }
+    }
+
+    .right {
+      width: 680px;
+    }
+  }
+}
