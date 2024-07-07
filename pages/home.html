@@ -132,9 +132,10 @@
     <section id="section-1">
       <div class="container">
         <div class="mining-metrics">
-          <div class="mining-speed">Mining speed: <span class="multiply">×</span> <span>0.5</span></div>
+          <div class="mining-speed">Mining speed: <span class="multiply">×</span> <span id="mining-speed"></span>
+          </div>
           <div class="range">
-            <input type="range" min="0" max="100" value="30" id="range" />
+            <input type="range" min="0" max="100" step="0.1" value="30" id="range" />
           </div>
           <div class="coefficient">
             <div class="coefficient-item">
@@ -581,11 +582,34 @@
   })
 
   const setActiveRange = (value) => {
-    const tempSliderValue = Number(value);
+    const sliderValue = Number(value);
 
-    const progress = (tempSliderValue / sliderEl.max) * 100;
+    const miningSpeed = getMiningSpeed(sliderValue)
 
-    sliderEl.style.background = `linear-gradient(to right, #7190FF ${progress}%, #F2F2F2 ${progress}%)`;
+    $('#mining-speed').html(miningSpeed)
+
+    sliderEl.style.background = `linear-gradient(to right, #7190FF ${sliderValue}%, #F2F2F2 ${sliderValue}%)`;
+  }
+
+  const getMiningSpeed = (sliderValue) => {
+    const rangeSpace = 100 / 6;
+
+    const minValues = [1, 2, 6, 20, 30, 60, 280];
+    const spaceValues = [1, 4, 14, 10, 30, 220, 0];
+
+    let coefficientId = Math.floor(sliderValue / rangeSpace);
+
+    coefficientId = Math.min(coefficientId, minValues.length - 2);
+
+    let min = minValues[coefficientId];
+    let space = spaceValues[coefficientId];
+
+    let rawSpeed = min + space * (sliderValue - rangeSpace * coefficientId) / rangeSpace;
+
+    if (rawSpeed < 2) {
+      return Math.round(rawSpeed * 10) / 10;
+    }
+    return Math.round(rawSpeed);
   }
 
   $(document).ready(function () {

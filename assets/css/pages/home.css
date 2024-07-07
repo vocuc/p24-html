@@ -125,44 +125,44 @@
 
       }
     }
+  #range {
+    margin-top: 42px;
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 6px;
+    height: 12px;
+    background: #F2F2F2;
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none; 
+        height: 40px;
+        width: 40px;
+        background: transparent;
+        background-image: url("../../image/light.png");
+        background-size: cover;
+        border-radius: 50%;
+      }
+      
+      /* Thumb: Firefox */
+      &::-moz-range-thumb {
+        height: 40px;
+        width: 40px;
+        background: transparent;
+        background-image: url("../../image/light.png");
+        background-size: cover;
+        border: none;
+        border-radius: 50%;
+      }
+  }
 
-    #range {
-      margin-top: 42px;
-      -webkit-appearance: none;
-      appearance: none; 
-      width: 100%;
-      cursor: pointer;
-      outline: none;
-      border-radius: 6px;
-      height: 12px;
-      background: #F2F2F2;
-        &::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          appearance: none; 
-          height: 40px;
-          width: 40px;
-          background: transparent;
-          background-image: url("../../image/light.png");
-          background-size: cover;
-          border-radius: 50%;
-        }
-        
-        /* Thumb: Firefox */
-        &::-moz-range-thumb {
-          height: 40px;
-          width: 40px;
-          background: transparent;
-          background-image: url("../../image/light.png");
-          background-size: cover;
-          border: none;
-          border-radius: 50%;
-        }
-    }
     
     
 
     .coefficient {
-      margin: 10px 0 49px 0;
+      margin: 10px 0 49px -16px;
       display: flex;
       justify-content: space-between;
 
