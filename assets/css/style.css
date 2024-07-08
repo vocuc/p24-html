@@ -264,3 +264,71 @@ body {
   }
 
 }
+
+/* Modal */
+.modal-backdrop {
+  --bs-backdrop-bg: #FFF;
+  --bs-backdrop-opacity: 0.5;
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  --bs-modal-width: 652px;
+  --bs-modal-border-color: transparent;
+  --bs-modal-inner-border-radius: 12px;
+
+  .modal-dialog {
+    
+    .modal-content {
+      box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+      .modal-header {
+        padding: 32px 32px 23px 32px;
+        position: relative;
+        justify-content: center;
+        border-bottom: unset;
+
+        .btn-close {
+          position: absolute;
+          top: 32px;
+          right: 32px;
+        }
+      }
+
+      .modal-body {
+        padding: 0 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .modal-title {
+          text-align: center;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 122%;
+        }
+
+        .modal-text {
+          color: var(--Neutre-600, #6B767F);
+          text-align: center;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 30px;
+          margin-bottom: 0;
+        }
+      }
+
+      .modal-footer {
+        padding: 23px 32px 32px 32px;
+        border-top: unset;
+        justify-content: center;
+
+        .btn {
+          min-width: 171px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+/* Modal */

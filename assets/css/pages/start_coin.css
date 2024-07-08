@@ -1,7 +1,16 @@
 main{
   background-color: #FFF;
   section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
     margin-top: 48px;
+    border-radius: var(--lg, 12px);
+    background-color: #FFF;
+    .container{
+      max-width: 880px;
+    }
   
     .section-title {
       font-size: 24px;
@@ -12,10 +21,11 @@ main{
 }
 
 #section-1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
+
+  background-image: url(../../image/background.png), url(../../image/background.png);
+  background-size: 219px;
+  background-position: top 118px left -29px, top 91px right 0px;
+  background-repeat: no-repeat;
 
   .title {
     display: flex;
@@ -39,10 +49,15 @@ main{
   }
 
   button {
-    border: 14px solid #FFF;
-    background: radial-gradient(57.98% 56.91% at 50% 50%, #5382F9 0%, #1855F1 100%);
+    border: 14px solid #f4f7ff;
+    background-image: url(../../image/bg-tech-animation.png), url(../../image/bg-tech-animation.png),radial-gradient(57.98% 56.91% at 50% 50%, #5382F9 0%, #1855F1 100%);
+    background-size: 112px,112px,contain;
+    background-position: top 0px left 0, top 0px right -19px, top 0 right 0;
+    background-repeat: no-repeat;
+
+
     box-shadow: 0px 8px 24px 0px rgba(255, 255, 255, 0.25) inset;
-    padding: 20px 24px;
+    padding: 20px 71px;
     border-radius: 133px;
 
     font-size: 28px;
@@ -52,7 +67,6 @@ main{
     display: flex;
     align-items: center;
     gap: 8px;
-    
   }
 
   .earned {
@@ -107,12 +121,51 @@ main{
   }
 }
 
+#section-3{
+  .price {
+    display: flex;
+
+    .price-item {
+      width: calc(100% / 4);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: var(--inset-sm, 12px);
+      border: 1px solid #E3E3E3;
+
+      .title {
+        font-size: 14px;
+        color: #878B8E;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+
+      .value {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+
+      }
+    }
+
+    .price-item:not(:nth-last-child(1)) {
+      border-right: unset;
+    }
+    .price-item:nth-last-of-type(1){
+      border-radius: 0 8px 8px 0;
+    }
+    .price-item:first-of-type{
+      border-radius: 8px 0 0 8px;
+    }
+
+  }
+}
 
 #section-4 {
-  padding: 128px 0 112px 0;
-  background-image: url(../../image/background.png);
-  background-size: 304px;
-  background-position: bottom 72px left -63px;
+  background-image: url(../../image/background.png),url(../../image/background.png);
+  background-size: 219px;
+  background-position: bottom 131px left 0px, top 50px right -97px;
   background-repeat: no-repeat;
 
 }
