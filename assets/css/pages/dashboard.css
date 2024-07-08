@@ -35,18 +35,14 @@ main {
     }
 
     button {
+      border: 2px solid var(--NeutralAlpha-NA50, rgba(255, 255, 255, 0.50));
+      padding: 12px 48px;
       background: linear-gradient(180deg, #517FF4 0%, #1855F1 100%);
       border-radius: var(--md, 8px);
-      border: unset;
       color: var(--DarkOverlayElement-100, #FFF);
       font-weight: 700;
       line-height: 24px;
       letter-spacing: -0.176px;
-      height: 48px;
-      width: 143px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   }
   @media (max-width: 991px) {

@@ -39,11 +39,23 @@ body {
 
 .btn {
   --bs-btn-padding-x: 16px;
-  --bs-btn-padding-y: 16px;
+  --bs-btn-padding-y: 12px;
   --bs-btn-border-radius: 8px;
+  --bs-btn-font-size: 14px;
+  --bs-btn-font-weight: 700;
+  --bs-btn-line-height: 126%;
+}
+
+.btn-sm {
+  --bs-btn-padding-y: 8px;
+}
+
+.btn-lg {
+  --bs-btn-border-radius: 12px;
+  --bs-btn-padding-y: 12px;
+  --bs-btn-padding-x: 20px;
   --bs-btn-font-size: 16px;
-  --bs-btn-font-weight: 600;
-  --bs-btn-line-height: 100%;
+  --bs-btn-line-height: 122%;
 }
 
 .btn-primary {
@@ -190,19 +202,19 @@ body {
 /* Paginate */
 
 .pagination {
-  --bs-pagination-disabled-color:#C4CDD5;
-  --bs-pagination-disabled-bg:#ECEDEE;
-  --bs-pagination-disabled-border-color:#ECEDEE;
-  --bs-pagination-active-color:#1B6DDF;
-  --bs-pagination-active-bg:#FFFFFF;
-  --bs-pagination-active-border-color:#1B6DDF;
-  --bs-pagination-border-color:#DFE3E8;
-  --bs-pagination-border-radius:4px;
+  --bs-pagination-disabled-color: #C4CDD5;
+  --bs-pagination-disabled-bg: #ECEDEE;
+  --bs-pagination-disabled-border-color: #ECEDEE;
+  --bs-pagination-active-color: #1B6DDF;
+  --bs-pagination-active-bg: #FFFFFF;
+  --bs-pagination-active-border-color: #1B6DDF;
+  --bs-pagination-border-color: #DFE3E8;
+  --bs-pagination-border-radius: 4px;
   gap: var(--inset-sm, 8px);
 
   .page-item {
     border-radius: var(--bs-pagination-border-radius);
-    
+
     .page-link {
       padding: unset;
       height: 32px;
@@ -210,7 +222,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      
+
       --bs-pagination-font-size: 14px;
       --bs-pagination-color: #212B36;
       border-radius: var(--bs-pagination-border-radius);
@@ -220,29 +232,33 @@ body {
 }
 
 /* InputGroup */
-.input-group{
+.input-group {
   flex-wrap: nowrap;
-  &:focus-within{
+
+  &:focus-within {
     box-shadow: 0 0 0 2px rgba(13, 110, 253, .25);
-    border-radius:8px;
+    border-radius: 8px;
     transition-duration: 200ms;
   }
-  .input-group-text{
+
+  .input-group-text {
     border-color: #E7E6EC;
     background-color: #FFF;
     color: #A7AEB4;
-    border-radius:8px;
+    border-radius: 8px;
     font-size: 14px;
-    
-    }
-    .form-control,
-    .form-select{
+
+  }
+
+  .form-control,
+  .form-select {
     border-color: #E7E6EC;
     padding-left: 0;
     border-left: unset;
     font-size: 14px;
     font-weight: 500;
-    &:focus{
+
+    &:focus {
       box-shadow: unset;
     }
   }

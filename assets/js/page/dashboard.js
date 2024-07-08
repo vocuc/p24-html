@@ -34,7 +34,7 @@ var options = {
     pie: {
       size: 200,
       donut: {
-        size: "75%",
+        size: "80%",
         labels: {
           show: true,
           name: {
