@@ -30,6 +30,7 @@
       border: 1px solid #FFF;
       box-shadow: 0px 0px 1px 0px var(--NeutralAlphaInvert-NI05, rgba(44, 58, 114, 0.05));
       gap: var(--inset-sm, 8px);
+      background: var(--NeutralAlpha-NA50, rgba(255, 255, 255, 0.50));
 
     }
 
@@ -232,6 +233,7 @@
 @media (max-width: 991px) {
   #section-1 {
     height: 265px;
+    background-color: #F9F9F9;
   
     .mining-metrics {
       top: -25px;
@@ -362,8 +364,8 @@
 }
 @media (max-width: 991px) {
   #section-2 {
+    background-color: #F9F9F9;
     padding: 128px 0 40px 0;
-    background-color: #ECECEC;
     background-image: unset;
   
     .info-card {
