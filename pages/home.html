@@ -134,76 +134,94 @@
         <div class="mining-metrics">
           <div class="mining-speed">Mining speed: <span class="multiply">×</span> <span id="mining-speed"></span>
           </div>
-          <div class="range">
+          <!-- <div class="range">
             <input type="range" min="0" max="100" step="0.1" value="30" id="range" />
+          </div> -->
+          <div class="mining-process">
+            <div class="track"></div>
+            <div class="running"></div>
+            <img class="thumb" src="../assets/image/light.png" alt="light">
           </div>
           <div class="coefficient">
-            <div class="coefficient-item">
-              <div class="value">x1</div>
-              <img src="../assets/image/icon/standard.png" alt="">
-              <div class="name">Standard</div>
+            <div class="space">
+              <button class="coefficient-item" onclick="setMiningSpeed(0)">
+                <div class="value">x1</div>
+                <img src="../assets/image/icon/standard.png" alt="">
+                <div class="name">Standard</div>
+              </button>
             </div>
-            <div class="coefficient-item">
-              <div class="value">x2</div>
-              <img src="../assets/image/icon/Gold.png" alt="">
-              <div class="name">Gold</div>
+            <div class="space">
+              <button class="coefficient-item" onclick="setMiningSpeed(1)">
+                <div class="value">x2</div>
+                <img src="../assets/image/icon/Gold.png" alt="">
+                <div class="name">Gold</div>
+              </button>
             </div>
-            <div class="coefficient-item">
-              <div class="value">x6</div>
-              <img src="../assets/image/icon/Platium.png" alt="">
-              <div class="name">Platium</div>
+            <div class="space">
+              <button class="coefficient-item" onclick="setMiningSpeed(2)">
+                <div class="value">x6</div>
+                <img src="../assets/image/icon/Platium.png" alt="">
+                <div class="name">Platium</div>
+              </button>
             </div>
-            <div class="coefficient-item">
-              <div class="value">x20</div>
-              <img src="../assets/image/icon/Diamond.png" alt="">
-              <div class="name">Diamond</div>
+            <div class="space">
+              <button class="coefficient-item" onclick="setMiningSpeed(3)">
+                <div class="value">x20</div>
+                <img src="../assets/image/icon/Diamond.png" alt="">
+                <div class="name">Diamond</div>
+              </button>
             </div>
-            <div class="coefficient-item">
-              <div class="value">x30</div>
-              <img src="../assets/image/icon/VIP-1.png" alt="">
-              <div class="name">VIP 1</div>
+            <div class="space">
+              <button class="coefficient-item" onclick="setMiningSpeed(4)">
+                <div class="value">x30</div>
+                <img src="../assets/image/icon/VIP-1.png" alt="">
+                <div class="name">VIP 1</div>
+              </button>
             </div>
-            <div class="coefficient-item">
-              <div class="value">x60</div>
-              <img src="../assets/image/icon/VIP-2.png" alt="">
-              <div class="name">VIP 2</div>
+            <div class="space">
+              <button class="coefficient-item" onclick="setMiningSpeed(5)">
+                <div class="value">x60</div>
+                <img src="../assets/image/icon/VIP-2.png" alt="">
+                <div class="name">VIP 2</div>
+              </button>
             </div>
-            <div class="coefficient-item">
-              <div class="value">x280</div>
-              <img src="../assets/image/icon/VIP-3.png" alt="">
-              <div class="name">VIP 3</div>
+            <div class="space">
+              <button class="coefficient-item" onclick="setMiningSpeed(6)">
+                <div class="value">x280</div>
+                <img src="../assets/image/icon/VIP-3.png" alt="">
+                <div class="name">VIP 3</div>
+              </button>
             </div>
           </div>
           <div class="price">
-            <div class="price-item">
+            <div class="price-item" id="price-item-1">
               <div class="title">Trading volume needed
-<img src="../assets/image/info-1.svg" alt="">
-
+                <img src="../assets/image/info-1.svg" alt="">
               </div>
-              <div class="value">0 ₮</div>
-              <div class="title">≈0.72 USDT</div>
+              <div class="value"><span>0.0000108</span> ₮</div>
+              <div class="title">≈<span>0.72</span> USDT</div>
             </div>
-            <div class="price-item">
+            <div class="price-item" id="price-item-2">
               <div class="title">Daily income
-<img src="../assets/image/info-1.svg" alt="">
+                <img src="../assets/image/info-1.svg" alt="">
 
               </div>
-              <div class="value">0.0000108 ₿</div>
-              <div class="title">≈0.72 USDT</div>
+              <div class="value"><span>0.0000108</span> ₿</div>
+              <div class="title">≈<span>0.72</span> USDT</div>
             </div>
-            <div class="price-item">
+            <div class="price-item" id="price-item-3">
               <div class="title">Trading volume needed
-              <img src="../assets/image/info-1.svg" alt="">  
+                <img src="../assets/image/info-1.svg" alt="">
               </div>
-              <div class="value">0 ₮</div>
-              <div class="title">≈0.72 USDT</div>
+              <div class="value"><span>0.0000108</span> ₿</div>
+              <div class="title">≈<span>0.72</span> USDT</div>
             </div>
-            <div class="price-item">
+            <div class="price-item" id="price-item-4">
               <div class="title">Trading volume needed
-              <img src="../assets/image/info-1.svg" alt="">  
+                <img src="../assets/image/info-1.svg" alt="">
               </div>
-              <div class="value">0.0000108 ₿</div>
-              <div class="title">≈0.72 USDT</div>
+              <div class="value"><span>0.0000108</span> ₿</div>
+              <div class="title">≈<span>0.72</span> USDT</div>
             </div>
           </div>
         </div>
@@ -337,123 +355,64 @@
             </p>
           </div>
           <div class="right">
-            <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion" id="accordionExample">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                    aria-controls="panelsStayOpen-collapseOne">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Accordion Item #1
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
-                  aria-labelledby="panelsStayOpen-headingOne">
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
-                    plugin adds the appropriate classes that we use to style each element. These classes control the
-                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
-                    this with custom CSS or overriding our default variables. It's also worth noting that just about any
-                    HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseTwo">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     Accordion Item #2
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingTwo">
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseThree">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                     Accordion Item #3
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingThree">
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseFour">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                     Accordion Item #4
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingFour">
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingFive">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseFive">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                     Accordion Item #5
                   </button>
                 </h2>
-                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingFive">
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="panelsStayOpen-headingSix">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseSix">
-                    Accordion Item #6
-                  </button>
-                </h2>
-                <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse"
-                  aria-labelledby="panelsStayOpen-headingSeven">
-                  <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                   </div>
                 </div>
               </div>
@@ -585,45 +544,44 @@
 <script src="../assets/js/jquery/jquery-3.7.1.min.js"></script>
 <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 <script>
-  const sliderEl = document.querySelector("#range")
+  function setMiningSpeed(index) {
+    const speedValues = [1, 2, 6, 20, 30, 60, 280];
 
-  sliderEl.addEventListener("input", (event) => {
-    return setActiveRange(event.target.value)
-  })
+    let margin = '32px'
+    let thumb = '25px';
 
-  const setActiveRange = (value) => {
-    const sliderValue = Number(value);
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      margin = '16px'
+      thumb = '16px'
+    }
 
-    const miningSpeed = getMiningSpeed(sliderValue)
+    let pecentValues = `calc((${index} * (100% - 2 * ${margin}) / 6) + ${margin})`;
+    if (index == 6) {
+      pecentValues = `100%`;
+    }
 
-    $('#mining-speed').html(miningSpeed)
+    $('.running').css('width', pecentValues);
 
-    sliderEl.style.background = `linear-gradient(to right, #7190FF ${sliderValue}%, #F2F2F2 ${sliderValue}%)`;
+    $('.thumb').css('left', `calc(${pecentValues} - ${thumb})`);
+
+    $('#mining-speed').html(speedValues[index])
+
+    setMetric(speedValues[index])
   }
 
-  const getMiningSpeed = (sliderValue) => {
-    const rangeSpace = 100 / 6;
-
-    const minValues = [1, 2, 6, 20, 30, 60, 280];
-    const spaceValues = [1, 4, 14, 10, 30, 220, 0];
-
-    let coefficientId = Math.floor(sliderValue / rangeSpace);
-
-    coefficientId = Math.min(coefficientId, minValues.length - 2);
-
-    let min = minValues[coefficientId];
-    let space = spaceValues[coefficientId];
-
-    let rawSpeed = min + space * (sliderValue - rangeSpace * coefficientId) / rangeSpace;
-
-    if (rawSpeed < 2) {
-      return Math.round(rawSpeed * 10) / 10;
-    }
-    return Math.round(rawSpeed);
+  function setMetric(coefficient) {
+    $('#price-item-1 .value span').html(coefficient)
+    $('#price-item-1 .title span').html(coefficient)
+    $('#price-item-2 .value span').html(coefficient)
+    $('#price-item-2 .title span').html(coefficient)
+    $('#price-item-3 .value span').html(coefficient)
+    $('#price-item-3 .title span').html(coefficient)
+    $('#price-item-4 .value span').html(coefficient)
+    $('#price-item-4 .title span').html(coefficient)
   }
 
   $(document).ready(function () {
-    setActiveRange($("#range").val());
+    setMiningSpeed(4)
   });
 </script>
 

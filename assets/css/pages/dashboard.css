@@ -35,7 +35,9 @@ main {
     }
 
     button {
-      border: 2px solid var(--NeutralAlpha-NA50, rgba(255, 255, 255, 0.50));
+      /* border: 2px solid var(--NeutralAlpha-NA50, rgba(255, 255, 255, 0.50)); */
+      border: unset;
+      width: 183px;
       padding: 12px 48px;
       background: linear-gradient(180deg, #517FF4 0%, #1855F1 100%);
       border-radius: var(--md, 8px);
