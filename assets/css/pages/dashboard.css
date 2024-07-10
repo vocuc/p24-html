@@ -34,7 +34,7 @@ main {
 
     }
 
-    button {
+    a {
       /* border: 2px solid var(--NeutralAlpha-NA50, rgba(255, 255, 255, 0.50)); */
       border: unset;
       width: 183px;
@@ -45,6 +45,7 @@ main {
       font-weight: 700;
       line-height: 24px;
       letter-spacing: -0.176px;
+      text-decoration: none;
     }
   }
   @media (max-width: 991px) {
