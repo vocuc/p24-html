@@ -196,6 +196,10 @@ body {
     background-color: var(--Secondary-02, #CABDFF) !important;
     color: var(--Neutral-07, #1A1D1F) !important;
   }
+  &.text-bg-light{
+    color: #495367 !important;
+    background-color: #EBEEF2 !important;
+  }
 
 }
 

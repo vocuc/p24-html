@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/pages/layout.css">
+  <link rel="stylesheet" href="../assets/css/apexcharts/apexcharts.css">
+  <link rel="stylesheet" href="../assets/css/pages/blog.css">
+</head>
+
+<body>
+  <nav class="navbar"> 
+    <div class="navbar-wrapper navbar-expand-lg w-100">
+      <div class="d-flex justify-content-between w-100 navbar-menu">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/image/logo-black.png" alt="P24">
+        </a>
+        <div>
+          <button class="btn btn-primary get-started-btn">Get Started</button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <img src="../assets/image/navbar-button-icon-menu-1.svg" alt="">
+          </button>
+
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <img src="../assets/image/logo-black.png" alt="P24">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Lauchpad
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Earn</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Easy start
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Company</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-3 action align-items-center">
+              <div class="money">
+                <img src="../assets/image/navbar-button-text.png" alt="">
+                <div class="value">
+                  <div>3.00 USDT</div>
+                  <div>Bonus: 0.00 USDT</div>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.2051 4.59204C12.6117 4.18538 13.2848 4.18538 13.6915 4.59204C13.9018 4.80238 14 5.06882 14 5.33525C14 5.60168 13.9018 5.86812 13.6915 6.07846L8.74145 11.0285C8.33479 11.4352 7.6617 11.4352 7.25504 11.0285L2.305 6.07846C1.89833 5.6718 1.89833 4.9987 2.305 4.59204C2.71166 4.18538 3.38475 4.18538 3.79141 4.59204L7.99825 8.79888L12.2051 4.59204Z" fill="#8C8C8C"/>
+                  </svg>
+                  
+              </div>
+              <button class="btn btn-outline-primary">Recharge</button>
+              <div class="dropdown">
+                <div class="dropdown-toggle d-flex align-items-center gap-1" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="../assets/image/navbar-united-kingdom-1.png" width="24" height="24" alt="EN">
+                  EN
+                </div>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">
+                      <img src="../assets/image/navbar-united-kingdom-1.png" width="24" height="24" alt="EN">
+                      English
+                    </button></li>
+                  <li><button class="dropdown-item active" type="button">
+                      <img src="../assets/image/navbar-vietnam-1.png" width="24" height="24" alt="EN">
+                      Viet Nam</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <h1 class="page-title">Blogs</h1>
+
+      <section id="section-1">
+        <div class="blog-info">
+          <div class="tag">
+            <div class="text">Design to COde</div>
+            <span class="badge text-bg-light ">3 min read</span>
+          </div>
+          <h3 class="title">Locofy.ai – Turn Figma to Code!</h3>
+          <p class="short-content">Go from Figma to code in minimum amount of time using Locofy. Take your design to real world with Locofy's AI powered plugin.</p>
+          <a class="read" href="">Continue reading
+            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.1495 5.63189C10.8566 5.339 10.8566 4.86413 11.1495 4.57123C11.4424 4.27834 11.9173 4.27834 12.2102 4.57123L19.1388 11.4999L12.2102 18.4285C11.9173 18.7214 11.4424 18.7214 11.1495 18.4285C10.8566 18.1356 10.8566 17.6607 11.1495 17.3678L16.2676 12.2498H4.91992C4.50571 12.2498 4.16992 11.914 4.16992 11.4998C4.16992 11.0855 4.50571 10.7498 4.91992 10.7498H16.2674L11.1495 5.63189Z" fill="currentColor"/>
+              </svg>
+              
+          </a>
+        </div>
+        <img src="/assets/image/image-32.png" alt="">
+      </section>
+
+      <section id="section-2">
+        <h3>Discover more topics</h3>
+        <div class="category">
+          <a class="category-item active">
+            ALL
+          </a>
+          <a class="category-item">
+            DESIGN
+          </a>
+          <a class="category-item">
+            CODE
+          </a>
+          <a class="category-item">
+            Integrations
+          </a>
+          <a class="category-item">
+            Founder’s diary
+          </a>
+          <a class="category-item">
+            Design to code
+          </a>
+        </div>
+        <div class="blog-list">
+          <a href="#" class="blog-item">
+            <img src="../assets/image/image-32.png" alt="">
+            <div class="info">
+              <div class="tag">
+                <div class="text">Design to Code</div>
+                <span class="badge text-bg-light ">3 min read</span>
+              </div>
+              <h3 class="title">
+                Locofy.ai – Turn Figma to Code!
+              </h3>
+              <p class="short-content">Go from Figma to code in minimum amount of time using Locofy. Take your design to real world with Locofy's AI powered plugin.</p>
+            </div>
+          </a>
+          <a href="#" class="blog-item">
+            <img src="../assets/image/image-32.png" alt="">
+            <div class="info">
+              <div class="tag">
+                <div class="text">Design to Code</div>
+                <span class="badge text-bg-light ">3 min read</span>
+              </div>
+              <h3 class="title">
+                Locofy.ai – Turn Figma to Code!
+              </h3>
+              <p class="short-content">Go from Figma to code in minimum amount of time using Locofy. Take your design to real world with Locofy's AI powered plugin.</p>
+            </div>
+          </a>
+          <a href="#" class="blog-item">
+            <img src="../assets/image/image-32.png" alt="">
+            <div class="info">
+              <div class="tag">
+                <div class="text">Design to Code</div>
+                <span class="badge text-bg-light ">3 min read</span>
+              </div>
+              <h3 class="title">
+                Locofy.ai – Turn Figma to Code!
+              </h3>
+              <p class="short-content">Go from Figma to code in minimum amount of time using Locofy. Take your design to real world with Locofy's AI powered plugin.</p>
+            </div>
+          </a>
+          <a href="#" class="blog-item">
+            <img src="../assets/image/image-32.png" alt="">
+            <div class="info">
+              <div class="tag">
+                <div class="text">Design to Code</div>
+                <span class="badge text-bg-light ">3 min read</span>
+              </div>
+              <h3 class="title">
+                Locofy.ai – Turn Figma to Code!
+              </h3>
+              <p class="short-content">Go from Figma to code in minimum amount of time using Locofy. Take your design to real world with Locofy's AI powered plugin.</p>
+            </div>
+          </a>
+          <a href="#" class="blog-item">
+            <img src="../assets/image/image-32.png" alt="">
+            <div class="info">
+              <div class="tag">
+                <div class="text">Design to Code</div>
+                <span class="badge text-bg-light ">3 min read</span>
+              </div>
+              <h3 class="title">
+                Locofy.ai – Turn Figma to Code!
+              </h3>
+              <p class="short-content">Go from Figma to code in minimum amount of time using Locofy. Take your design to real world with Locofy's AI powered plugin.</p>
+            </div>
+          </a>
+          <a href="#" class="blog-item">
+            <img src="../assets/image/image-32.png" alt="">
+            <div class="info">
+              <div class="tag">
+                <div class="text">Design to Code</div>
+                <span class="badge text-bg-light ">3 min read</span>
+              </div>
+              <h3 class="title">
+                Locofy.ai – Turn Figma to Code!
+              </h3>
+              <p class="short-content">Go from Figma to code in minimum amount of time using Locofy. Take your design to real world with Locofy's AI powered plugin.</p>
+            </div>
+          </a>
+
+        </div>
+      </section>
+ 
+    </div>
+    <section id="section-3">
+      <div class="container">
+        <h5>Bitcoin mining on auto-pilot</h5>
+        <p>Here’s one example: you can earn <span>up to 6,000 satoshis every day</span> and use them to increase your
+          tradable funds when you reach <span>150,000 ₮</span> in trading volume</p>
+        <button>
+          Start mining
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M19.4996 2C19.8223 3.50309 20.9965 4.67723 22.4996 5C20.9965 5.32277 19.8223 6.49691 19.4996 8C19.1768 6.49691 18.0026 5.32277 16.4996 5C18.0026 4.67723 19.1768 3.50309 19.4996 2ZM9.57161 2.2C10.4831 6.44472 13.7989 9.7605 18.0436 10.672C13.7989 11.5835 10.4831 14.8993 9.57161 19.144C8.66011 14.8993 5.34433 11.5835 1.09961 10.672C5.34433 9.7605 8.66011 6.44472 9.57161 2.2ZM22.4996 18C20.4954 17.5696 18.9299 16.0041 18.4996 14C18.0692 16.0041 16.5037 17.5696 14.4996 18C16.5037 18.4304 18.0692 19.9959 18.4996 22C18.9299 19.9959 20.4954 18.4304 22.4996 18Z"
+              fill="white" />
+          </svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-wrapper container">
+      <div class="section-1">
+        <img src="../assets/image/logo-black.png" alt="logo">
+      </div>
+      <div class="section-2">
+        <div class="item">
+          <div class="title">
+            PRODUCT
+          </div>
+          <ul>
+            <li>
+              <a href="">Company Overview</a>
+            </li>
+            <li>
+              <a href="">Careers</a>
+            </li>
+            <li>
+              <a href="">Press & Media</a>
+            </li>
+            <li>
+              <a href="">Testimonials</a>
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="title">
+            Resources
+          </div>
+          <ul>
+            <li>
+              <a href="">Blog</a>
+            </li>
+            <li>
+              <a href="">Case Studies</a>
+            </li>
+            <li>
+              <a href="">Help Center</a>
+            </li>
+            <li>
+              <a href="">Webinars & Events</a>
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="title">
+            Support & Contact
+          </div>
+          <ul>
+            <li>
+              <a href="">Contact Us</a>
+            </li>
+            <li>
+              <a href="">Technical Support</a>
+            </li>
+            <li>
+              <a href="">Feedback</a>
+            </li>
+            <li>
+              <a href="">Community Forum</a>
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="title">
+            Connect
+          </div>
+          <ul>
+            <li>
+              <a href="">
+                <img src="../assets/image/icon/twitter.png" alt="">
+                Twitter / X</a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../assets/image/icon/insta.png" alt="">
+                Instagram</a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../assets/image/icon/fb.png" alt="">
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../assets/image/icon/linked.png" alt="">
+                Linkedin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-3">
+        ©2023 NIMBUS · All rights reserved.
+        <ul>
+          <li><a href="">Term of use</a></li>
+          <li><a href="">Privacy policy</a></li>
+          <li><a href="">Security</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="../assets/js/jquery/jquery-3.7.1.min.js"></script>
+<script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+</html>
