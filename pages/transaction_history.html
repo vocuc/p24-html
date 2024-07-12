@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/select2/select2.min.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/pages/layout.css">
   <link rel="stylesheet" href="../assets/css/pages/transaction_history.css">
@@ -91,9 +94,11 @@
                   <div>Bonus: 0.00 USDT</div>
                 </div>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.2051 4.59204C12.6117 4.18538 13.2848 4.18538 13.6915 4.59204C13.9018 4.80238 14 5.06882 14 5.33525C14 5.60168 13.9018 5.86812 13.6915 6.07846L8.74145 11.0285C8.33479 11.4352 7.6617 11.4352 7.25504 11.0285L2.305 6.07846C1.89833 5.6718 1.89833 4.9987 2.305 4.59204C2.71166 4.18538 3.38475 4.18538 3.79141 4.59204L7.99825 8.79888L12.2051 4.59204Z" fill="#8C8C8C"/>
-                  </svg>
-                  
+                  <path
+                    d="M12.2051 4.59204C12.6117 4.18538 13.2848 4.18538 13.6915 4.59204C13.9018 4.80238 14 5.06882 14 5.33525C14 5.60168 13.9018 5.86812 13.6915 6.07846L8.74145 11.0285C8.33479 11.4352 7.6617 11.4352 7.25504 11.0285L2.305 6.07846C1.89833 5.6718 1.89833 4.9987 2.305 4.59204C2.71166 4.18538 3.38475 4.18538 3.79141 4.59204L7.99825 8.79888L12.2051 4.59204Z"
+                    fill="#8C8C8C" />
+                </svg>
+
               </div>
               <button class="btn btn-outline-primary">Recharge</button>
               <div class="dropdown">
@@ -193,56 +198,42 @@
 
         <div class="d-flex justify-content-between align-items-center mt-4">
           <div class="d-flex gap-2">
-            <div class="input-group">
-              <span class="input-group-text" id="basic-addon1">
-                Type
-              </span>
-              <select name="" id="" class="form-select" style="width: 74px;">
-                <option value="">All</option>
-                <option value="">2</option>
-                <option value="">3</option>
-              </select>
-            </div>
-            <div class="input-group">
-              <span class="input-group-text" id="basic-addon1">
-                Time
-              </span>
-              <select name="" id="" class="form-select" style="font-weight: 700;width: 133px;">
-                <option value="">Past 30...</option>
-              </select>
-            </div>
-            <div class="input-group">
-              <span class="input-group-text" id="basic-addon1">
-                Coin
-              </span>
-              <select name="" id="" class="form-select" style="width: 74px;">
-                <option value="">All</option>
-                <option value="">2</option>
-                <option value="">3</option>
-              </select>
-            </div>
-            <div class="input-group">
-              <span class="input-group-text" id="basic-addon1">
-                Status
-              </span>
-              <select name="" id="" class="form-select" style="width: 87px;">
-                <option value="">All</option>
-                <option value="">2</option>
-                <option value="">3</option>
-              </select>
-            </div>
+            <select name="type" id="type" class="form-select" style="width:132px;flex-shrink: 0;">
+              <option value="">All</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
+
+            <select name="time" id="time" class="form-select" style="font-weight: 700;width: 191px;flex-shrink: 0;">
+              <option value="">Past 30...</option>
+            </select>
+            <select name="coin" id="coin" class="form-select" style="width: 180px;flex-shrink: 0;">
+                <option value="">Tất cả</option>
+                <option value="">Coin con chó</option>
+                <option value="">Coin con chó</option>
+                <option value="">Coin con chó</option>
+            </select>
+            <select name="status" id="status" class="form-select" style="width: 145px;flex-shrink: 0;">
+              <option value="">All</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
             <div class="input-group">
               <span class="input-group-text" id="basic-addon1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11ZM18.0319 16.6177C19.2635 15.078 20 13.125 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.125 20 15.078 19.2635 16.6177 18.0319L19.2929 20.7071C19.6834 21.0976 20.3166 21.0976 20.7071 20.7071C21.0976 20.3166 21.0976 19.6834 20.7071 19.2929L18.0319 16.6177Z" fill="#6F767E"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11ZM18.0319 16.6177C19.2635 15.078 20 13.125 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.125 20 15.078 19.2635 16.6177 18.0319L19.2929 20.7071C19.6834 21.0976 20.3166 21.0976 20.7071 20.7071C21.0976 20.3166 21.0976 19.6834 20.7071 19.2929L18.0319 16.6177Z"
+                    fill="#6F767E" />
                 </svg>
               </span>
-              <input type="text" class="form-control" placeholder="Nhập txID" aria-label="Nhập txID" aria-describedby="basic-addon1"  style="width: 133px;">
+              <input type="text" class="form-control" placeholder="Nhập txID" aria-label="Nhập txID"
+                aria-describedby="basic-addon1" style="width: 133px;">
             </div>
           </div>
-          <div >
+          <div>
             <button class="btn btn-primary btn-lg">Deposit Crypto</button>
-            <button class="btn btn-outline-primary btn-lg ms-2" style="background: #FFF;color: #1B6DDF;">Withdraw Crypto</button>
+            <button class="btn btn-outline-primary btn-lg ms-2" style="background: #FFF;color: #1B6DDF;">Withdraw
+              Crypto</button>
           </div>
         </div>
 
@@ -270,7 +261,7 @@
                   </td>
                   <td>$128,899.00</td>
                   <td>$128,899.00</td>
-                  </tr>
+                </tr>
                 <tr>
                   <td>Oct 2021</td>
                   <td>
@@ -282,17 +273,18 @@
                   </td>
                   <td>$128,899.00</td>
                   <td>$128,899.00</td>
-                  </tr>
+                </tr>
               </tbody>
             </table>
-           </div>
+          </div>
         </div>
         <nav aria-label="Page navigation">
           <ul class="pagination justify-content-center">
             <li class="page-item disabled">
               <a class="page-link" href="#" tabindex="-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M15.1602 7.41L10.5802 12L15.1602 16.59L13.7502 18L7.75016 12L13.7502 6L15.1602 7.41Z" fill="currentColor"/>
+                  <path d="M15.1602 7.41L10.5802 12L15.1602 16.59L13.7502 18L7.75016 12L13.7502 6L15.1602 7.41Z"
+                    fill="currentColor" />
                 </svg>
               </a>
             </li>
@@ -302,8 +294,9 @@
             <li class="page-item">
               <a class="page-link" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M8.83984 7.41L13.4198 12L8.83984 16.59L10.2498 18L16.2498 12L10.2498 6L8.83984 7.41Z" fill="currentColor"/>
-                  </svg>
+                  <path d="M8.83984 7.41L13.4198 12L8.83984 16.59L10.2498 18L16.2498 12L10.2498 6L8.83984 7.41Z"
+                    fill="currentColor" />
+                </svg>
               </a>
             </li>
           </ul>
@@ -418,5 +411,73 @@
 </body>
 <script src="../assets/js/jquery/jquery-3.7.1.min.js"></script>
 <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/select2/select2.min.js"></script>
+<script>
+  $('.input-group').click(function () {
+    $(this).find('select').trigger('focus').trigger($.Event("keyup", { keyCode: 13 }));
+    $(this).find('input').trigger('focus');
+  })
+
+  $("#type").select2({
+    theme: 'bootstrap-5',
+    width: 'resolve',
+    templateSelection: function (state) {
+      let $state = $(
+        '<span><span class="prefix">Type</span> <span class="text"></span></span>'
+      );
+
+      // Use .text() instead of HTML string concatenation to avoid script injection issues
+      $state.find(".text").text(state.text);
+
+      return $state;
+    },
+
+  });
+  $("#time").select2({
+    theme: 'bootstrap-5',
+    width: 'resolve',
+    templateSelection: function (state) {
+      let $state = $(
+        '<span><span class="prefix">Time</span> <span class="text"></span></span>'
+      );
+
+      // Use .text() instead of HTML string concatenation to avoid script injection issues
+      $state.find(".text").text(state.text);
+
+      return $state;
+    },
+
+  });
+  $("#coin").select2({
+    theme: 'bootstrap-5',
+    width: 'resolve',
+    templateSelection: function (state) {
+      let $state = $(
+        '<span><span class="prefix">Coin</span> <span class="text"></span></span>'
+      );
+
+      // Use .text() instead of HTML string concatenation to avoid script injection issues
+      $state.find(".text").text(state.text);
+
+      return $state;
+    },
+
+  });
+  $("#status").select2({
+    theme: 'bootstrap-5',
+    width: 'resolve',
+    templateSelection: function (state) {
+      let $state = $(
+        '<span><span class="prefix">Status</span> <span class="text"></span></span>'
+      );
+
+      // Use .text() instead of HTML string concatenation to avoid script injection issues
+      $state.find(".text").text(state.text);
+
+      return $state;
+    },
+
+  });
+</script>
 
 </html>
