@@ -194,31 +194,46 @@
       <section id="section-1">
         <div class="section-title d-flex justify-content-between">
           <h2>Transaction History</h2>
+          <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"> 
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.0215 3H3.97905C3.57179 3.00032 3.17337 3.11885 2.83216 3.34119C2.49095 3.56353 2.22162 3.88013 2.05684 4.25257C1.89206 4.62501 1.83893 5.03727 1.90389 5.43931C1.96885 5.84136 2.14911 6.21591 2.4228 6.5175L9.3753 14.1638V21.375C9.37536 21.516 9.41514 21.6541 9.49009 21.7734C9.56504 21.8928 9.67212 21.9887 9.79905 22.05C9.90049 22.1 10.0122 22.1257 10.1253 22.125C10.2958 22.1249 10.4611 22.0667 10.594 21.96L12.0003 20.835L14.344 18.96C14.4317 18.8898 14.5026 18.8008 14.5512 18.6995C14.5999 18.5982 14.6252 18.4874 14.6253 18.375V14.1638L21.5778 6.5175C21.8515 6.21591 22.0317 5.84136 22.0967 5.43931C22.1617 5.03727 22.1085 4.62501 21.9438 4.25257C21.779 3.88013 21.5096 3.56353 21.1684 3.34119C20.8272 3.11885 20.4288 3.00032 20.0215 3Z" fill="black"/>
+              </svg>
+
+          </button>
+            
         </div>
 
-        <div class="d-flex justify-content-between align-items-center mt-4">
-          <div class="d-flex gap-2">
-            <select name="type" id="type" class="form-select" style="width:132px;flex-shrink: 0;">
-              <option value="">All</option>
-              <option value="">2</option>
-              <option value="">3</option>
-            </select>
+        <div class="d-flex justify-content-between align-items-center mt-4 filter">
+          <div class="d-flex gap-2 filter-block">
+            <div class="type">
+              <select name="type" id="type" class="form-select" style="width:132px;flex-shrink: 0;">
+                <option value="">All</option>
+                <option value="">2</option>
+                <option value="">3</option>
+              </select>
+            </div>
 
-            <select name="time" id="time" class="form-select" style="font-weight: 700;width: 191px;flex-shrink: 0;">
-              <option value="">Past 30...</option>
-            </select>
-            <select name="coin" id="coin" class="form-select" style="width: 180px;flex-shrink: 0;">
-                <option value="">Tất cả</option>
-                <option value="">Coin con chó</option>
-                <option value="">Coin con chó</option>
-                <option value="">Coin con chó</option>
-            </select>
-            <select name="status" id="status" class="form-select" style="width: 145px;flex-shrink: 0;">
-              <option value="">All</option>
-              <option value="">2</option>
-              <option value="">3</option>
-            </select>
-            <div class="input-group">
+            <div class="time">
+              <select name="time" id="time" class="form-select" style="font-weight: 700;width: 191px;flex-shrink: 0;">
+                <option value="">Past 30...</option>
+              </select>
+            </div>
+            <div class="coin">
+              <select name="coin" id="coin" class="form-select" style="width: 180px;flex-shrink: 0;">
+                  <option value="">Tất cả</option>
+                  <option value="">Coin con chó</option>
+                  <option value="">Coin con chó</option>
+                  <option value="">Coin con chó</option>
+              </select>
+            </div>
+            <div class="status">
+              <select name="status" id="status" class="form-select" style="width: 145px;flex-shrink: 0;">
+                <option value="">All</option>
+                <option value="">2</option>
+                <option value="">3</option>
+              </select>
+            </div>
+            <div class="input-group txID">
               <span class="input-group-text" id="basic-addon1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -226,13 +241,13 @@
                     fill="#6F767E" />
                 </svg>
               </span>
-              <input type="text" class="form-control" placeholder="Nhập txID" aria-label="Nhập txID"
+              <input type="text" name="txID" class="form-control" placeholder="Nhập txID" aria-label="Nhập txID"
                 aria-describedby="basic-addon1" style="width: 133px;">
             </div>
           </div>
-          <div>
+          <div class="button-block">
             <button class="btn btn-primary btn-lg">Deposit Crypto</button>
-            <button class="btn btn-outline-primary btn-lg ms-2" style="background: #FFF;color: #1B6DDF;">Withdraw
+            <button class="btn btn-outline-primary btn-lg" style="background: #FFF;color: #1B6DDF;">Withdraw
               Crypto</button>
           </div>
         </div>
@@ -304,6 +319,50 @@
       </section>
     </div>
   </main>
+
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Filter</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body small">
+    <div class="d-flex gap-2 filter-block">
+      <div class="type">
+        <select name="type" id="type1" class="form-select" style="width:132px;flex-shrink: 0;">
+          <option value="">All</option>
+          <option value="">2</option>
+          <option value="">3</option>
+        </select>
+      </div>
+
+      <div class="time">
+        <select name="time" id="time1" class="form-select" style="font-weight: 700;width: 191px;flex-shrink: 0;">
+          <option value="">Past 30...</option>
+        </select>
+      </div>
+      <div class="coin">
+        <select name="coin" id="coin1" class="form-select" style="width: 180px;flex-shrink: 0;">
+            <option value="">Tất cả</option>
+            <option value="">Coin con chó</option>
+            <option value="">Coin con chó</option>
+            <option value="">Coin con chó</option>
+        </select>
+      </div>
+      <div class="status">
+        <select name="status" id="status1" class="form-select" style="width: 145px;flex-shrink: 0;">
+          <option value="">All</option>
+          <option value="">2</option>
+          <option value="">3</option>
+        </select>
+      </div>
+    </div>
+    <div class="button-block">
+      <button class="btn btn-primary btn-lg">Deposit Crypto</button>
+      <button class="btn btn-outline-primary btn-lg" style="background: #FFF;color: #1B6DDF;">Withdraw
+        Crypto</button>
+    </div>
+  </div>
+</div>
 
   <footer class="footer">
     <div class="footer-wrapper container">
@@ -418,7 +477,7 @@
     $(this).find('input').trigger('focus');
   })
 
-  $("#type").select2({
+  $("#type,#type1").select2({
     theme: 'bootstrap-5',
     width: 'resolve',
     templateSelection: function (state) {
@@ -433,7 +492,7 @@
     },
 
   });
-  $("#time").select2({
+  $("#time,#time1").select2({
     theme: 'bootstrap-5',
     width: 'resolve',
     templateSelection: function (state) {
@@ -448,7 +507,7 @@
     },
 
   });
-  $("#coin").select2({
+  $("#coin,#coin1").select2({
     theme: 'bootstrap-5',
     width: 'resolve',
     templateSelection: function (state) {
@@ -463,7 +522,7 @@
     },
 
   });
-  $("#status").select2({
+  $("#status,#status1").select2({
     theme: 'bootstrap-5',
     width: 'resolve',
     templateSelection: function (state) {

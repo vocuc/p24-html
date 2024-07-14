@@ -1,5 +1,5 @@
 main {
-  margin-top: 24px;
+  padding-top: 24px;
 
   .page-title {
     font-size: 36px;
@@ -7,7 +7,8 @@ main {
   }
   
   @media (max-width: 991px) {
-    margin-top: 24px;
+    padding-top: 24px;
+    background-color: #FFF;
   
     .page-title {
       font-size: 28px;
@@ -18,20 +19,26 @@ main {
 
   #section-1 {
     .section-title {
+      align-items: center;
       h2 {
         font-size: 24px;
         font-weight: 700;
-
+        margin-bottom: 0;
       }
 
-      a {
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--Neutre-700, #4F575E);
-        text-decoration: none;
+      button{
+        border: unset;
+        background-color: unset;
+        display: none;
+      }
+    }
+
+    .filter{
+      flex-wrap: wrap;
+      gap: 16px;
+      .button-block{
         display: flex;
-        align-items: center;
-        gap: 4px;
+        gap: 16px;
       }
     }
 
@@ -51,4 +58,83 @@ main {
       margin-top: 45px;
     }
   }
-}
+
+  @media (max-width: 991px) {
+    #section-1 {
+      .section-title {
+        h2 {
+          font-size: 28px;
+          font-weight: 600;
+          
+        }
+        button{
+          display: block;
+        }
+      }
+      .filter{
+        margin-top: 16px !important;
+        .filter-block{
+          flex: 1;
+          .txID{
+            width: 100%;
+          }
+    
+          .type,.time,.coin,.status{
+            display: none;
+          }
+  
+        }
+        .button-block{
+          width: 100%;
+
+          .btn{
+            width: calc(50% - 8px);
+            border-radius: 8px;
+          }
+        }
+      }
+  
+      .transaction-table {
+        margin-top: 16px;
+        background: #FCFCFC;
+        padding: 0;
+        border-radius: unset;
+        box-shadow: unset;
+        
+        .table-wrapper {
+          overflow-x: auto;
+        }
+      }
+  
+      .pagination{
+        margin-top: 45px;
+      }
+    }
+
+  }
+
+  }
+    #offcanvasBottom{
+      height: fit-content;
+      border-radius: 8px 8px 0 0;
+      .offcanvas-body{
+        .filter-block{
+          display: flex;
+          flex-direction: column;
+          .select2-container{
+            width: 100% !important;
+          }
+        }
+        .button-block{
+          margin-top: 16px;
+          width: 100%;
+          display: flex;
+          gap: 16px;
+
+          .btn{
+            width: calc(50% - 8px);
+            border-radius: 8px;
+          }
+        }
+      }
+    }
