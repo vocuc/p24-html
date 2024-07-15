@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>We are in the process of completion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/pages/layout.css">
+  <style>
+
+    .modal-body{
+      .modal-text-2{
+        font-size: 14px;
+        color: var(--Neutre-400, #A7AEB4);
+        
+      }
+      .copy-key{
+        margin-top: 15px;
+        max-width: 485px;
+        padding: var(--inset-sm, 8px) 16px;
+        border-radius: var(--md, 8px);
+        background: #E8F1FC;
+        display: flex;
+
+        .text{
+          font-size: 20px;
+          font-family: "IBM Plex Sans", sans-serif;
+          line-height: 30px;
+          overflow: hidden;
+          
+        }
+
+        .button{
+          cursor: pointer;
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          color: var(--Primary-200, #1B6DDF);
+          padding-left: 26px;
+          background: linear-gradient(270deg, #E8F1FC 48.26%, #E8F1FC 81.15%, rgba(232, 241, 252, 0.00) 91.24%);
+          font-weight: 500;
+          
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-wrapper navbar-expand-lg w-100">
+      <div class="d-flex justify-content-between w-100 navbar-menu">
+        <a class="navbar-brand" href="#">
+          <img src="../../assets/image/logo-black.png" alt="P24">
+        </a>
+        <div>
+          <button class="btn btn-primary get-started-btn">Get Started</button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <img src="../../assets/image/navbar-button-icon-menu-1.svg" alt="">
+          </button>
+
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <img src="../../assets/image/logo-black.png" alt="P24">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Lauchpad
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Earn</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Easy start
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Company</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-3 action align-items-center">
+              <div class="money">
+                <img src="../../assets/image/navbar-button-text.png" alt="">
+                <div class="value">
+                  <div>3.00 USDT</div>
+                  <div>Bonus: 0.00 USDT</div>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.2051 4.59204C12.6117 4.18538 13.2848 4.18538 13.6915 4.59204C13.9018 4.80238 14 5.06882 14 5.33525C14 5.60168 13.9018 5.86812 13.6915 6.07846L8.74145 11.0285C8.33479 11.4352 7.6617 11.4352 7.25504 11.0285L2.305 6.07846C1.89833 5.6718 1.89833 4.9987 2.305 4.59204C2.71166 4.18538 3.38475 4.18538 3.79141 4.59204L7.99825 8.79888L12.2051 4.59204Z"
+                    fill="#8C8C8C" />
+                </svg>
+
+              </div>
+              <button class="btn btn-outline-primary">Recharge</button>
+              <div class="dropdown">
+                <div class="dropdown-toggle d-flex align-items-center gap-1" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="../../assets/image/navbar-united-kingdom-1.png" width="24" height="24" alt="EN">
+                  EN
+                </div>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">
+                      <img src="../../assets/image/navbar-united-kingdom-1.png" width="24" height="24" alt="EN">
+                      English
+                    </button></li>
+                  <li><button class="dropdown-item active" type="button">
+                      <img src="../../assets/image/navbar-vietnam-1.png" width="24" height="24" alt="EN">
+                      Viet Nam</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Lauchpad
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Earn</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Easy start
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Company</a>
+          </li>
+        </ul>
+        <div class="d-flex gap-2 action align-items-center">
+          <button class="btn btn-outline-primary">Download</button>
+          <button class="btn btn-primary">Get Started</button>
+          <div class="dropdown">
+            <div class="dropdown-toggle d-flex align-items-center gap-1" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="../../assets/image/navbar-united-kingdom-1.png" width="24" height="24" alt="EN">
+              EN
+            </div>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item" type="button">EN</button></li>
+              <li><button class="dropdown-item" type="button">VN</button></li>
+            </ul>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </nav>
+
+  <main>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 652px;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-back" aria-label="Back">
+              <img src="../../assets/image/icon/popup-arrow-1.png" alt="">
+            </button>
+            <img src="../../assets/image/modal/popup-password-21.png" alt=""/>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h5 class="modal-title">Save this key</h5>
+            <p class="modal-text">Please write this key dowm on paper. It will allow you to recover your Google Authentication if you lose your phone.</p>
+            <span class="modal-text-2">Do not upload this key to public sources</span>
+            <div class="copy-key">
+              <span class="text">
+                https://app.stormgain.com/friend/BNS195212083
+              </span>
+              <span class="button">
+                <img src="../../assets/image/icon/copy.svg" alt="">
+                Copy key
+              </span>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-lg">Continute</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-wrapper container">
+      <div class="section-1">
+        <img src="../../assets/image/logo-black.png" alt="logo">
+      </div>
+      <div class="section-2">
+        <div class="item">
+          <div class="title">
+            PRODUCT
+          </div>
+          <ul>
+            <li>
+              <a href="">Company Overview</a>
+            </li>
+            <li>
+              <a href="">Careers</a>
+            </li>
+            <li>
+              <a href="">Press & Media</a>
+            </li>
+            <li>
+              <a href="">Testimonials</a>
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="title">
+            Resources
+          </div>
+          <ul>
+            <li>
+              <a href="">Blog</a>
+            </li>
+            <li>
+              <a href="">Case Studies</a>
+            </li>
+            <li>
+              <a href="">Help Center</a>
+            </li>
+            <li>
+              <a href="">Webinars & Events</a>
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="title">
+            Support & Contact
+          </div>
+          <ul>
+            <li>
+              <a href="">Contact Us</a>
+            </li>
+            <li>
+              <a href="">Technical Support</a>
+            </li>
+            <li>
+              <a href="">Feedback</a>
+            </li>
+            <li>
+              <a href="">Community Forum</a>
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="title">
+            Connect
+          </div>
+          <ul>
+            <li>
+              <a href="">
+                <img src="../../assets/image/icon/twitter.png" alt="">
+                Twitter / X</a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../assets/image/icon/insta.png" alt="">
+                Instagram</a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../assets/image/icon/fb.png" alt="">
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../../assets/image/icon/linked.png" alt="">
+                Linkedin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-3">
+        ©2023 NIMBUS · All rights reserved.
+        <ul>
+          <li><a href="">Term of use</a></li>
+          <li><a href="">Privacy policy</a></li>
+          <li><a href="">Security</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script src="../../assets/js/jquery/jquery-3.7.1.min.js"></script>
+<script src="../../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script>
+  const myModal = new bootstrap.Modal('#exampleModal', {
+  })
+  $(document).ready(function () {
+    myModal.show()
+  });
+</script>
+</html>

@@ -297,8 +297,17 @@ body {
           right: 32px;
         }
       }
-
+      .modal-header{
+        .btn-back{
+          position: absolute;
+          top: 32px;
+          left: 32px;
+          border: unset;
+          background-color: unset;
+        }
+      }
       .modal-body {
+        align-items: center;
         padding: 0 32px;
         display: flex;
         flex-direction: column;
@@ -312,6 +321,7 @@ body {
         }
 
         .modal-text {
+          font-family: "IBM Plex Sans";
           color: var(--Neutre-600, #6B767F);
           text-align: center;
           font-size: 20px;
