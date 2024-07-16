@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/swiper/swiper-bundle.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/pages/layout.css">
   <link rel="stylesheet" href="../assets/css/pages/home.css">
@@ -337,6 +338,68 @@
       </div>
     </section>
 
+    <div id="section-6">
+      <div class="container">
+        <div class="company-block">
+          <div class="text">Trusted by 4,000+ companies</div>
+          <div class="company swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="company-item swiper-slide">
+                <img src="../assets/image/company/boltshift.png" alt="">
+              </div>
+              <div class="company-item swiper-slide">
+                <img src="../assets/image/company/lightbox.png" alt="">
+              </div>
+              <div class="company-item swiper-slide">
+                <img src="../assets/image/company/featherdev.png" alt="">
+              </div>
+              <div class="company-item swiper-slide">
+                <img src="../assets/image/company/spherule.png" alt="">
+              </div>
+              <div class="company-item swiper-slide">
+                <img src="../assets/image/company/globalbank.png" alt="">
+              </div>
+              <div class="company-item swiper-slide">
+                <img src="../assets/image/company/featherdev.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="section-7">
+      <div class="container">
+        <div class="crypto-block">
+          <div class="title">
+            <span class="text-1">Buy/ Sell top crypto:</span>
+            <span class="text-2">$32.0011</span>
+            <span class="text-3">30 day volume</span>
+          </div>
+          <div class="crypto-item">
+            <img src="../assets/image/crypto/1.png" alt="">
+            <div class="text-1">Bitcoin/Tether</div>
+            <div class="text-2">57 641.00</div>
+          </div>
+          <div class="crypto-item">
+            <img src="../assets/image/crypto/2.png" alt="">
+            <div class="text-1">Bitcoin/Tether</div>
+            <div class="text-2">57 641.00</div>
+          </div>
+          <div class="crypto-item">
+            <img src="../assets/image/crypto/3.png" alt="">
+            <div class="text-1">Bitcoin/Tether</div>
+            <div class="text-2">57 641.00</div>
+          </div>
+          <div class="crypto-item">
+            <img src="../assets/image/crypto/4.png" alt="">
+            <div class="text-1">Bitcoin/Tether</div>
+            <div class="text-2">57 641.00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <section id="section-4">
       <div class="container">
         <div class="d-flex justify-content-between align-items-start flex-wrap">
@@ -543,6 +606,7 @@
 </body>
 <script src="../assets/js/jquery/jquery-3.7.1.min.js"></script>
 <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/swiper/swiper-bundle.js"></script>
 <script>
   function setMiningSpeed(index) {
     const speedValues = [1, 2, 6, 20, 30, 60, 280];
@@ -579,6 +643,28 @@
     $('#price-item-4 .value span').html(coefficient)
     $('#price-item-4 .title span').html(coefficient)
   }
+
+  var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        300: {
+          spaceBetween: 10,
+          slidesPerView: 2,
+          grid: {
+            rows: 2,
+          },
+        },
+        991: {
+          spaceBetween: 24,
+          slidesPerView: 5,
+        
+        },
+      },
+    });
 
   $(document).ready(function () {
     setMiningSpeed(4)
