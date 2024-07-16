@@ -160,64 +160,197 @@
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade active show" id="deposit" role="tabpanel" aria-labelledby="deposit-tab">
             <div class="left">
+              <div class="step-block">
+                <div class="line"></div>
+                <label class="step deposit-step-1" for="token">
+                  <span>
+                    1
+                  </span>
+                </label>
+                <label class="step deposit-step-2" for="user">
+                  <span>
+                    2
+                  </span>
+                </label>
+                <label class="step deposit-step-3" for="amount">
+                  <span>
+                    3
+                  </span>
+                </label>
+              </div>
               <form action="">
-                <div class="form-item">
-                  <label for="token" class="form-label">Token</label>
-                  <select name="token" id="token" class="form-select">
-                    <option value="">All</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                  </select>
+                <div class="form-item" data-step=".deposit-step-1">
+                  <label class="step deposit-step-1" for="token">
+                    <span>
+                      1
+                    </span>
+                  </label>
+                  <div class="w-100">
+                    <label for="token" class="form-label">Token</label>
+                    <select name="token" id="token" class="form-select">
+                      <option value="">All</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="form-item">
-                  <label for="user" class="form-label">Withdraw To</label>
-                  <select name="user" id="user" class="form-select" style="width: 100%;">
-                    <option value="">All</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                  </select>
+                <div class="form-item" data-step=".deposit-step-2">
+                  <label class="step deposit-step-2" for="user"> 
+                    <span>2</span>
+                  </label>
+                  <div class="w-100">
+                    <label for="user" class="form-label">Withdraw To</label>
+                    <select name="user" id="user" class="form-select" style="width: 100%;">
+                      <option value="">All</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="form-item">
-                  <label for="amount" class="form-label">Amount</label>
-                  <div class="input-group">
-                    <input type="text" class="form-control" aria-label="" name="amount" id="amount" value="100">
-                    <div class="input-group-text">
-                      <select name="unit" class="" id="unit">
-                        <option value="EUR" >EUR</option>
-                      </select>
+                <div class="form-item" data-step=".deposit-step-3">
+                  <label class="step deposit-step-3" for="amount">
+                    <span>3</span>
+                  </label>
+                  <div class="w-100">
+                    <label for="amount" class="form-label">Amount</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" aria-label="" name="amount" id="amount" value="100">
+                      <div class="input-group-text">
+                        <select name="unit" class="" id="unit">
+                          <option value="EUR" >EUR</option>
+                        </select>
+                      </div>
                     </div>
-                  </div>
-                  <div class="money-list">
-                    <button type="button" onclick="setAmount(500000)" class="btn btn-light">500,000</button>
-                    <button type="button" onclick="setAmount(1000000)" class="btn btn-light">1,000,000</button>
-                    <button type="button" onclick="setAmount(5000000)" class="btn btn-light">5,000,000</button>
-                    <button type="button" onclick="setAmount(10000000)" class="btn btn-light">10,000,000</button>
+                    <div class="money-list">
+                      <button type="button" onclick="setAmount(500000)" class="btn btn-light">500,000</button>
+                      <button type="button" onclick="setAmount(1000000)" class="btn btn-light">1,000,000</button>
+                      <button type="button" onclick="setAmount(5000000)" class="btn btn-light">5,000,000</button>
+                      <button type="button" onclick="setAmount(10000000)" class="btn btn-light">10,000,000</button>
+                    </div>
+
                   </div>
                 </div>
+                <div class="form-item">
+                  <div style="width: 24px;"></div>
                 <button class="btn btn-primary w-100">Deposit</button>
+                </div>
               </form>
             </div>
             <div class="right">
-              <h5>FAQ</h5>
-              <a href="" class="faq-card">
-                <img src="../assets/image/faq.png" alt="">
-                <div>
-                  <div class="title">How to withdraw cryto?</div>
-                  <div class="more">More</div>
-                </div>
-              </a>
-              <ul>
-                <li><a href="http://">How to Find My Transaction ID ?</a></li>
-                <li><a href="http://">How to Recover My BEP-20 Tokens</a></li>
-                <li><a href="http://">Deposit & Withdrawal Status query</a></li>
-              </ul>
+              <div>
+                <h5>FAQ</h5>
+                <a href="" class="faq-card">
+                  <img src="../assets/image/faq.png" alt="">
+                  <div>
+                    <div class="title">How to withdraw cryto?</div>
+                    <div class="more">More</div>
+                  </div>
+                </a>
+                <ul>
+                  <li><a href="http://">How to Find My Transaction ID ?</a></li>
+                  <li><a href="http://">How to Recover My BEP-20 Tokens</a></li>
+                  <li><a href="http://">Deposit & Withdrawal Status query</a></li>
+                </ul>
+              </div>
+              <img src="../assets/image/frame-1171276013.png" alt="">
             </div>
           </div>
           <div class="tab-pane fade" id="withdraw" role="tabpanel" aria-labelledby="withdraw-tab">
-            <p><strong>This is some placeholder content the Profile tab's associated content.</strong>
-              Clicking another tab will toggle the visibility of this one for the next.
-              The tab JavaScript swaps classes to control the content visibility and styling. You can use it with
-              tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+            <div class="left">
+              <div class="step-block">
+                <div class="line"></div>
+                <label class="step withdraw-step-1" for="token1">
+                  <span>
+                    1
+                  </span>
+                </label>
+                <label class="step withdraw-step-2" for="user1">
+                  <span>
+                    2
+                  </span>
+                </label>
+                <label class="step withdraw-step-3" for="amount1">
+                  <span>
+                    3
+                  </span>
+                </label>
+              </div>
+              <form action="">
+                <div class="form-item" data-step=".withdraw-step-1">
+                  <label class="step withdraw-step-1" for="token1" >
+                    <span>
+                      1
+                    </span>
+                  </label>
+                  <div class="w-100">
+                    <label for="token1" class="form-label">Token</label>
+                    <select name="token" id="token1" class="form-select">
+                      <option value="">All</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-item" data-step=".withdraw-step-2">
+                  <label class="step withdraw-step-2" for="user1"> 
+                    <span>2</span>
+                  </label>
+                  <div class="w-100">
+                    <label for="user1" class="form-label">Withdraw To</label>
+                    <select name="user" id="user1" class="form-select" style="width: 100%;">
+                      <option value="">All</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-item" data-step=".withdraw-step-3">
+                  <label class="step withdraw-step-3" for="amount1">
+                    <span>3</span>
+                  </label>
+                  <div class="w-100">
+                    <label for="amount1" class="form-label">Amount</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" aria-label="" name="amount1" id="amount1" value="100">
+                      <div class="input-group-text">
+                        <select name="unit" class="" id="unit">
+                          <option value="EUR" >EUR</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="money-list">
+                      <button type="button" onclick="setAmount(500000)" class="btn btn-light">500,000</button>
+                      <button type="button" onclick="setAmount(1000000)" class="btn btn-light">1,000,000</button>
+                      <button type="button" onclick="setAmount(5000000)" class="btn btn-light">5,000,000</button>
+                      <button type="button" onclick="setAmount(10000000)" class="btn btn-light">10,000,000</button>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="form-item">
+                  <div style="width: 24px;"></div>
+                <button class="btn btn-primary w-100">Withdrawal</button>
+                </div>
+              </form>
+            </div>
+            <div class="right">
+              <div>
+                <h5>FAQ</h5>
+                <a href="" class="faq-card">
+                  <img src="../assets/image/faq.png" alt="">
+                  <div>
+                    <div class="title">How to withdraw cryto?</div>
+                    <div class="more">More</div>
+                  </div>
+                </a>
+                <ul>
+                  <li><a href="http://">How to Find My Transaction ID ?</a></li>
+                  <li><a href="http://">How to Recover My BEP-20 Tokens</a></li>
+                  <li><a href="http://">Deposit & Withdrawal Status query</a></li>
+                </ul>
+              </div>
+              <img src="../assets/image/frame-1171276013.png" alt="">
+            </div>
           </div>
         </div>
       </section>
@@ -276,6 +409,25 @@
             </table>
           </div>
         </div>
+      </section>
+
+      <section id="section-3">
+        <div>
+          <h5>FAQ</h5>
+          <a href="" class="faq-card">
+            <img src="../assets/image/faq.png" alt="">
+            <div>
+              <div class="title">How to withdraw cryto?</div>
+              <div class="more">More</div>
+            </div>
+          </a>
+          <ul>
+            <li><a href="http://">How to Find My Transaction ID ?</a></li>
+            <li><a href="http://">How to Recover My BEP-20 Tokens</a></li>
+            <li><a href="http://">Deposit & Withdrawal Status query</a></li>
+          </ul>
+        </div>
+        <img src="../assets/image/frame-1171276013.png" alt="">
       </section>
     </div>
   </main>
@@ -395,10 +547,25 @@
     theme: 'bootstrap-5',
     width: 'resolve',
   });
+  $("#token1").select2({
+    theme: 'bootstrap-5',
+    width: 'resolve',
+  });
+  $("#user1").select2({
+    theme: 'bootstrap-5',
+    width: 'resolve',
+  });
 
   function setAmount(value){
     $("#amount").val(value);
   }
+
+  $('.form-item').click(function(){
+    let step = $(this).data('step')
+    console.log(step);
+    $(".step").removeClass('active')
+    $(step).addClass('active');
+  })
 </script>
 
 </html>
