@@ -145,49 +145,49 @@
           </div> -->
           <div class="coefficient">
             <div class="space">
-              <button class="coefficient-item" onclick="setMiningSpeed(0)">
+              <button class="coefficient-item" onclick="choosePackage(0)">
                 <div class="value">x1</div>
                 <img src="../assets/image/icon/standard.png" alt="">
                 <div class="name">Standard</div>
               </button>
             </div>
             <div class="space">
-              <button class="coefficient-item" onclick="setMiningSpeed(1)">
+              <button class="coefficient-item" onclick="choosePackage(1)">
                 <div class="value">x2</div>
                 <img src="../assets/image/icon/Gold.png" alt="">
                 <div class="name">Gold</div>
               </button>
             </div>
             <div class="space">
-              <button class="coefficient-item" onclick="setMiningSpeed(2)">
+              <button class="coefficient-item" onclick="choosePackage(2)">
                 <div class="value">x6</div>
                 <img src="../assets/image/icon/Platium.png" alt="">
                 <div class="name">Platium</div>
               </button>
             </div>
             <div class="space">
-              <button class="coefficient-item" onclick="setMiningSpeed(3)">
+              <button class="coefficient-item" onclick="choosePackage(3)">
                 <div class="value">x20</div>
                 <img src="../assets/image/icon/Diamond.png" alt="">
                 <div class="name">Diamond</div>
               </button>
             </div>
             <div class="space">
-              <button class="coefficient-item" onclick="setMiningSpeed(4)">
+              <button class="coefficient-item" onclick="choosePackage(4)">
                 <div class="value">x30</div>
                 <img src="../assets/image/icon/VIP-1.png" alt="">
                 <div class="name">VIP</div>
               </button>
             </div>
             <!-- <div class="space">
-              <button class="coefficient-item" onclick="setMiningSpeed(5)">
+              <button class="coefficient-item" onclick="choosePackage(5)">
                 <div class="value">x60</div>
                 <img src="../assets/image/icon/VIP-2.png" alt="">
                 <div class="name">VIP 2</div>
               </button>
             </div>
             <div class="space">
-              <button class="coefficient-item" onclick="setMiningSpeed(6)">
+              <button class="coefficient-item" onclick="choosePackage(6)">
                 <div class="value">x280</div>
                 <img src="../assets/image/icon/VIP-3.png" alt="">
                 <div class="name">VIP 3</div>
@@ -642,45 +642,26 @@
 <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/swiper/swiper-bundle.js"></script>
 <script>
-  // const sliderEl = document.querySelector("#range")
+  $("#range").on("input", function () {
+    setMiningSpeed($(this).val())
 
-  // sliderEl.addEventListener("input", (event) => {
-  //   return setActiveRange(event.target.value)
-  // })
+    return false;
+  });
 
-  const setActiveRange = (value) => {
-    const sliderValue = Number(value);
+  function choosePackage(index){
+    $("#range").val(index).trigger("change")
 
-    $("#range").css("background",`linear-gradient(to right, #7190FF ${sliderValue * 100 / 4}%, #F2F2F2 ${sliderValue * 100 / 4}%)`);
+    return setMiningSpeed(index)
   }
-
-  $("#range").change(function(){
-    return setActiveRange($(this).val())
-  })
 
   function setMiningSpeed(index) {
     const speedValues = [1, 2, 6, 20, 30];
 
-    // let margin = '32px'
-    // let thumb = '25px';
-
-    // if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    //   margin = '16px'
-    //   thumb = '16px'
-    // }
-
-    // let pecentValues = `calc((${index} * (100% - 2 * ${margin}) / 6) + ${margin})`;
-    // if (index == 6) {
-    //   pecentValues = `100%`;
-    // }
-
-    // $('.running').css('width', pecentValues);
-
-    // $('.thumb').css('left', `calc(${pecentValues} - ${thumb})`);
-
-    // $('#mining-speed').html(speedValues[index])
+    $('#mining-speed').text(speedValues[index]);
 
     setMetric(speedValues[index])
+
+    $("#range").css("background", `linear-gradient(to right, #7190FF ${index * 100 / 4}%, #F2F2F2 ${index * 100 / 4}%)`);
   }
 
   function setMetric(coefficient) {
@@ -717,7 +698,7 @@
   });
 
   $(document).ready(function () {
-    setMiningSpeed(4)
+    setMiningSpeed($("#range").val())
   });
 </script>
 
