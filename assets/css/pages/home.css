@@ -128,8 +128,8 @@
       }
     }
 
-    .mining-process {
-      margin-top: 42px;
+    /* .mining-process {
+      margin: 42px 32px 0;
       position: relative;
       height: 50px;
 
@@ -156,6 +156,22 @@
         z-index: 3;
         left: calc(50% - 25px);
       }
+    } */
+    .range {
+      padding: 42px 16px 0;
+
+      #range {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        cursor: pointer;
+        outline: none;
+        border-radius: 6px;
+        height: 12px;
+        background: #F2F2F2;
+
+
+      }
     }
 
     .coefficient {
@@ -164,7 +180,7 @@
       justify-content: space-between;
 
       .space {
-        width: calc(100% / 6);
+        width: calc(100% / 4);
         flex-shrink: 0;
 
         .coefficient-item {
@@ -257,7 +273,7 @@
         font-weight: 600;
       }
 
-      .mining-process {
+      /* .mining-process {
         margin-top: 20px;
         height: 40px;
 
@@ -272,6 +288,10 @@
           height: 32px;
           left: calc(50% - 16px);
         }
+      } */
+
+      .range {
+        padding: 42px 0 0;
       }
 
       .coefficient {
@@ -695,46 +715,51 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    
-    .title{
+
+    .title {
       position: absolute;
       top: -15px;
       background: var(--Neutre-50, #FFF);
       display: flex;
       align-items: center;
       gap: 12px;
-      
-      .text-1{
+
+      .text-1 {
         font-size: 18px;
         font-weight: 700;
         color: var(--Neutre-800, #33383D);
       }
-      .text-2{
+
+      .text-2 {
         font-size: 18px;
         font-weight: 700;
         color: var(--Primary-200, #1B6DDF);
       }
-      .text-3{
+
+      .text-3 {
         font-size: 14px;
         font-weight: 500;
         color: var(--Neutre-500, #8E979F);
       }
     }
-    
-    .crypto-item{
+
+    .crypto-item {
       display: flex;
       gap: 12px;
       align-items: center;
-      img{
+
+      img {
         width: 32px;
         height: 32px;
-        
+
       }
-      .text-1{
+
+      .text-1 {
         font-size: 14px;
         font-weight: 700;
       }
-      .text-2{
+
+      .text-2 {
         color: var(--Neutre-700, #4F575E);
         font-size: 14px;
         font-weight: 500;
@@ -742,33 +767,36 @@
     }
   }
 }
+
 @media (max-width: 991px) {
   #section-7 {
     padding: 56px 0;
-  
+
     .crypto-block {
       padding: 32px;
       gap: 32px;
       flex-direction: column;
-      
-      .title{
+
+      .title {
         top: -15px;
         left: 16px;
         gap: 4px;
-        
-        .text-1{
+
+        .text-1 {
           font-size: 18px;
         }
-        .text-2{
+
+        .text-2 {
           font-size: 20px;
         }
-        .text-3{
+
+        .text-3 {
           font-size: 14px;
         }
       }
-      
-      .crypto-item{
-        .text-2{
+
+      .crypto-item {
+        .text-2 {
           color: #000;
         }
       }
