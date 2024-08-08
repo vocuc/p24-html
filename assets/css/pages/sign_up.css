@@ -1,5 +1,3 @@
-
-
 video {
   z-index: -1;
   position: absolute;
@@ -14,42 +12,43 @@ video {
   width: 100%;
   padding: 48px 16px;
   border-radius: 20px;
-  background: var(--background-mode, #FFF);
+  background: var(--background-mode, #fff);
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
 
-  .logo{
-    cursor: pointer;
-  }
+.login-section .logo {
+  cursor: pointer;
+}
 
-  h3 {
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 34px;
+.login-section h3 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 34px;
+}
 
-  }
+.login-section input[id='password'] {
+  padding: 16px 45px 16px 16px;
+}
 
-  input[id='password']{
-    padding:  16px 45px 16px 16px;
+.login-section input[id='password']+svg {
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  top: 12px;
+}
 
-    +svg{
-      cursor: pointer;
-      position: absolute;
-      right: 16px;
-      top: 12px;
-    }
-  }
+.login-section .social-btn {
+  flex-wrap: wrap;
+}
 
-  .social-btn{
-    flex-wrap: wrap;
-    >div{
-      color: var(--foreground-low, #98A2B3);
-    }
-    button{
-      width: calc(50% - 8px);
-    }
-  }
+.login-section .social-btn>div {
+  color: var(--foreground-low, #98a2b3);
+}
+
+.login-section .social-btn button {
+  width: calc(50% - 8px);
 }
 
 @media (min-width: 768px) {
@@ -59,19 +58,17 @@ video {
   }
 }
 
-.already-have-an-account{
+.already-have-an-account {
   display: flex;
   justify-content: center;
   gap: 8px;
-
   text-transform: capitalize;
   font-size: 16px;
   font-weight: 400;
-  color: var(--foreground-low, #98A2B3);
-  
-  a{
-    text-decoration: none;
-    color: var(--foreground-primary, #1570EF);
-    
-  }
+  color: var(--foreground-low, #98a2b3);
+}
+
+.already-have-an-account a {
+  text-decoration: none;
+  color: var(--foreground-primary, #1570ef);
 }

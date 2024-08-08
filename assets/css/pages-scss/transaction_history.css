@@ -1,0 +1,140 @@
+main {
+  padding-top: 24px;
+
+  .page-title {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  @media (max-width: 991px) {
+    padding-top: 24px;
+    background-color: #FFF;
+  
+    .page-title {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+  }
+
+  #section-1 {
+    .section-title {
+      align-items: center;
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+
+      button{
+        border: unset;
+        background-color: unset;
+        display: none;
+      }
+    }
+
+    .filter{
+      flex-wrap: wrap;
+      gap: 16px;
+      .button-block{
+        display: flex;
+        gap: 16px;
+      }
+    }
+
+    .transaction-table {
+      margin-top: 16px;
+      background: #FFF;
+      padding: 24px;
+      border-radius: var(--lg, 12px);
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
+      
+      .table-wrapper {
+        overflow-x: auto;
+      }
+    }
+
+    .pagination{
+      margin-top: 45px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    #section-1 {
+      .section-title {
+        h2 {
+          font-size: 28px;
+          font-weight: 600;
+          
+        }
+        button{
+          display: block;
+        }
+      }
+      .filter{
+        margin-top: 16px !important;
+        .filter-block{
+          flex: 1;
+          .txID{
+            width: 100%;
+          }
+    
+          .type,.time,.coin,.status{
+            display: none;
+          }
+  
+        }
+        .button-block{
+          width: 100%;
+
+          .btn{
+            width: calc(50% - 8px);
+            border-radius: 8px;
+          }
+        }
+      }
+  
+      .transaction-table {
+        margin-top: 16px;
+        background: #FCFCFC;
+        padding: 0;
+        border-radius: unset;
+        box-shadow: unset;
+        
+        .table-wrapper {
+          overflow-x: auto;
+        }
+      }
+  
+      .pagination{
+        margin-top: 45px;
+      }
+    }
+
+  }
+
+  }
+    #offcanvasBottom{
+      height: fit-content;
+      border-radius: 8px 8px 0 0;
+      .offcanvas-body{
+        .filter-block{
+          display: flex;
+          flex-direction: column;
+          .select2-container{
+            width: 100% !important;
+          }
+        }
+        .button-block{
+          margin-top: 16px;
+          width: 100%;
+          display: flex;
+          gap: 16px;
+
+          .btn{
+            width: calc(50% - 8px);
+            border-radius: 8px;
+          }
+        }
+      }
+    }
