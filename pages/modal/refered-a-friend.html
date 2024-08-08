@@ -14,44 +14,40 @@
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/pages/layout.css">
   <style>
-
-    .modal-body{
-      .modal-text-2{
-        font-size: 14px;
-        color: var(--Neutre-400, #A7AEB4);
-        
-      }
-      .copy-key{
-        margin-top: 15px;
-        max-width: 485px;
-        padding: var(--inset-sm, 8px) 16px;
-        border-radius: var(--md, 8px);
-        background: #E8F1FC;
-        display: flex;
-
-        .text{
-          font-size: 20px;
-          font-family: "IBM Plex Sans", sans-serif;
-          line-height: 30px;
-          overflow: hidden;
-          
-        }
-
-        .button{
-          cursor: pointer;
-          flex-shrink: 0;
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          color: var(--Primary-200, #1B6DDF);
-          padding-left: 26px;
-          background: linear-gradient(270deg, #E8F1FC 48.26%, #E8F1FC 81.15%, rgba(232, 241, 252, 0.00) 91.24%);
-          font-weight: 500;
-          
-        }
-      }
+    .modal-body .modal-text-2 {
+      font-size: 14px;
+      color: var(--Neutre-400, #a7aeb4);
     }
-    .modal-footer{
+
+    .modal-body .copy-key {
+      margin-top: 15px;
+      max-width: 485px;
+      padding: var(--inset-sm, 8px) 16px;
+      border-radius: var(--md, 8px);
+      background: #e8f1fc;
+      display: flex;
+    }
+
+    .modal-body .copy-key .text {
+      font-size: 20px;
+      font-family: "IBM Plex Sans", sans-serif;
+      line-height: 30px;
+      overflow: hidden;
+    }
+
+    .modal-body .copy-key .button {
+      cursor: pointer;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--Primary-200, #1b6ddf);
+      padding-left: 26px;
+      background: linear-gradient(270deg, #e8f1fc 48.26%, #e8f1fc 81.15%, rgba(232, 241, 252, 0.00) 91.24%);
+      font-weight: 500;
+    }
+
+    .modal-footer {
       flex-direction: column;
       gap: 23px;
     }
@@ -235,7 +231,7 @@
       <div class="modal-dialog modal-dialog-centered" style="max-width: 652px;">
         <div class="modal-content">
           <div class="modal-header">
-            <img src="../../assets/image/modal/popup-money-transfer-1.png" alt=""/>
+            <img src="../../assets/image/modal/popup-money-transfer-1.png" alt="" />
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -373,4 +369,5 @@
     myModal.show()
   });
 </script>
+
 </html>
